@@ -1,0 +1,84 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 70px;
+}
+header nav {
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav #logo-container {
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 70px;
+}
+header nav #logo-container #logo {
+  width: 50px;
+  height: 70px;
+}
+header nav #hamburger {
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 35px;
+  height: 50px;
+}
+header nav #hamburger .upper,
+header nav #hamburger .middle,
+header nav #hamburger .lower {
+  position: absolute;
+  top: 25%;
+  transition: 0.3s ease;
+  background-color: red;
+  width: 25px;
+  height: 2px;
+}
+header nav #hamburger .middle {
+  top: 50%;
+}
+header nav #hamburger .lower {
+  top: 75%;
+}
+header nav #hamburger .upper-active,
+header nav #hamburger .middle-active,
+header nav #hamburger .lower-active {
+  transition: 0.3s ease;
+}
+header nav #hamburger .upper-active {
+  top: 50%;
+  transform: rotate(-135deg);
+}
+header nav #hamburger .middle-active {
+  opacity: 0;
+  width: 0;
+  transform: rotate(360deg);
+}
+header nav #hamburger .lower-active {
+  top: 50%;
+  transform: rotate(135deg);
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */
