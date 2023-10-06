@@ -81,4 +81,32 @@ body {
   min-height: 100vh;
 }
 
+label {
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+input {
+  text-decoration: none;
+  border: 0;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  margin-top: 5px;
+}
+
+#form-container {
+  margin: 0 auto;
+  border-radius: 7px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.26);
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.212);
+  backdrop-filter: 10px;
+  outline: 1px white;
+  margin-top: calc((50vh - 70px) / 2);
+}
+
 /*# sourceMappingURL=style.css.map */

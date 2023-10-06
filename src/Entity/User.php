@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as assert;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[UniqueEntity(fields: ['username'], message: 'There is already an account with this username')]
@@ -18,6 +19,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?int $id = null;
 
     #[ORM\Column(length: 180, unique: true)]
+    #[assert\NotBlank(message: "Ce champs ne peut pas être vide")]
     private ?string $username = null;
 
     #[ORM\Column]
@@ -27,18 +29,29 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @var string The hashed password
      */
     #[ORM\Column]
+    #[assert\NotBlank(message: "Ce champs ne peut pas être vide")]
+    #[assert\Length(
+        min: 6,
+        minMessage: "Ce champs doit contenir au minimum {{limit}} caractères",
+        max: 255,
+        maxMessage: "Ce champs doit contenir au maximum {{limit}} caractères"
+    )]
     private ?string $password = null;
 
     #[ORM\Column(length: 255)]
+    #[assert\NotBlank(message: "Ce champs ne peut pas être vide")]
     private ?string $email = null;
 
     #[ORM\Column(length: 255)]
+    #[assert\NotBlank(message: "Ce champs ne peut pas être vide")]
     private ?string $firstName = null;
 
     #[ORM\Column(length: 255)]
+    #[assert\NotBlank(message: "Ce champs ne peut pas être vide")]
     private ?string $lastName = null;
 
     #[ORM\Column(length: 255)]
+    #[assert\NotBlank(message: "Ce champs ne peut pas être vide")]
     private ?string $address = null;
 
     public function getId(): ?int
