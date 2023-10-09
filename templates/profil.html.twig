@@ -3,5 +3,13 @@
 {% block title %}Profil utilisateur{% endblock %}
 
 {% block body %}
-<div>{{ app username}}</div>
+{% block header %}
+{{parent()}}
+{% endblock header %}
+<div>User name :{{ app.user.username}}</div>
+<a href="#">Changer mon mot de passe </a>
+<div>First name :{{ app.user.firstname}}</div>
+<div>Last name:{{ app.user.lastname}}</div>
+<div>Email:{{ app.user.email}}</div>
+<div>Address:{{ app.user.address}}</div>
 {% endblock body %}

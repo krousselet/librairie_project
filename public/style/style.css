@@ -81,4 +81,55 @@ body {
   min-height: 100vh;
 }
 
+label {
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+input {
+  text-decoration: none;
+  border: 0;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  margin-top: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#form-container {
+  margin: 0 auto;
+  border-radius: 7px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.26);
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.212);
+  backdrop-filter: 10px;
+  outline: 1px white;
+  margin-top: calc((50vh - 70px) / 2);
+}
+
+#navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: 33vw;
+  height: 300px;
+  margin-top: 25vh;
+  background-color: rgba(128, 128, 128, 0.13);
+  border-radius: 7px;
+  outline: 1px solid black;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.144);
+}
+#navigation #login,
+#navigation #register {
+  padding: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */
