@@ -29,13 +29,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @var string The hashed password
      */
     #[ORM\Column]
-    #[assert\NotBlank(message: "Ce champs ne peut pas être vide")]
-    #[assert\Length(
-        min: 6,
-        minMessage: "Ce champs doit contenir au minimum {{limit}} caractères",
-        max: 255,
-        maxMessage: "Ce champs doit contenir au maximum {{limit}} caractères"
-    )]
+    // #[assert\NotBlank(message: "Ce champs ne peut pas être vide")]
+    // #[assert\Length(
+    //     min: 6,
+    //     minMessage: "Ce champs doit contenir au minimum {{limit}} caractères",
+    //     max: 255,
+    //     maxMessage: "Ce champs doit contenir au maximum {{limit}} caractères"
+    // )]
     private ?string $password = null;
 
     #[ORM\Column(length: 255)]
