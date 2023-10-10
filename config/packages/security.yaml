@@ -40,6 +40,7 @@ security:
     # - { path: ^/admin, roles: ROLE_ADMIN }
     - { path: ^/profile, roles: ROLE_USER } # ça, c'est le chemin. Donc en gros tu mets la page à restreindre, et le rôle minimum pour y accéder
     - { path: ^/user, roles: ROLE_USER }
+    - { path: ^/location, roles: ROLE_USER }
 
 when@test:
   security:

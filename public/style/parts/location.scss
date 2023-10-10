@@ -1,0 +1,24 @@
+#container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33vw;
+    height: 33vh;
+    margin: 0 auto;
+    margin-top: calc((50vh - 70px) / 2);
+
+    #title-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #list-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
