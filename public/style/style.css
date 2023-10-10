@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 header {
   display: flex;
   justify-content: center;
@@ -6,6 +7,7 @@ header {
   width: 100vw;
   height: 70px;
 }
+
 header nav {
   width: 100vw;
   height: 70px;
@@ -13,6 +15,7 @@ header nav {
   justify-content: space-between;
   align-items: center;
 }
+
 header nav #logo-container {
   margin-left: 15px;
   display: flex;
@@ -21,20 +24,24 @@ header nav #logo-container {
   width: 50px;
   height: 70px;
 }
+
 header nav #logo-container #logo {
   width: 50px;
   height: 70px;
 }
+
 header nav .navigation-menu {
   width: 250px;
   height: 70px;
   display: none;
 }
+
 header nav .navigation-menu-active {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 header nav #hamburger {
   margin-right: 15px;
   display: flex;
@@ -44,6 +51,7 @@ header nav #hamburger {
   width: 35px;
   height: 50px;
 }
+
 header nav #hamburger .upper,
 header nav #hamburger .middle,
 header nav #hamburger .lower {
@@ -54,26 +62,32 @@ header nav #hamburger .lower {
   width: 25px;
   height: 2px;
 }
+
 header nav #hamburger .middle {
   top: 50%;
 }
+
 header nav #hamburger .lower {
   top: 75%;
 }
+
 header nav #hamburger .upper-active,
 header nav #hamburger .middle-active,
 header nav #hamburger .lower-active {
   transition: 0.3s ease;
 }
+
 header nav #hamburger .upper-active {
   top: 50%;
   transform: rotate(-135deg);
 }
+
 header nav #hamburger .middle-active {
   opacity: 0;
   width: 0;
   transform: rotate(360deg);
 }
+
 header nav #hamburger .lower-active {
   top: 50%;
   transform: rotate(135deg);
@@ -121,7 +135,7 @@ a {
   background-color: rgba(128, 128, 128, 0.26);
   box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.212);
   -webkit-backdrop-filter: 10px;
-          backdrop-filter: 10px;
+  backdrop-filter: 10px;
   outline: 1px white;
   margin-top: calc((50vh - 70px) / 2);
 }
@@ -139,10 +153,13 @@ a {
   outline: 1px solid black;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.144);
 }
+
 #navigation #login,
 #navigation #register {
   padding: 5px;
 }
+
+<<<<<<< HEAD=======
 
 /* Styles pour le conteneur du profil utilisateur */
 .user-profile {
@@ -155,6 +172,7 @@ a {
   border-radius: 15px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 .user-profile:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -190,6 +208,7 @@ a {
   font-weight: bold;
   transition: color 0.3s ease-in-out;
 }
+
 .user-profile a:hover {
   color: #1abc9c;
 }
@@ -200,17 +219,25 @@ a {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-15px);
   }
+
   60% {
     transform: translateY(-10px);
   }
 }
-#container {
+
+>>>>>>>db594cb69b4580a2e219526926585c8810eef74a #container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -220,14 +247,196 @@ a {
   margin: 0 auto;
   margin-top: calc((50vh - 70px) / 2);
 }
+
 #container #title-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #container #list-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}/*# sourceMappingURL=style.css.map */
+}
+
+<<<<<<< HEAD=======
+
+/* Styles pour le conteneur du profil utilisateur */
+.user-profile {
+  margin: 20px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  max-width: 400px;
+  background: linear-gradient(to right, #f7f7f7, #ffffff);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.user-profile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Styles pour chaque section d'informations du profil */
+.user-profile div {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.user-profile div:last-child {
+  margin-bottom: 0;
+}
+
+/* Styles pour les étiquettes d'informations */
+.user-profile div:nth-child(even) {
+  color: #2980b9;
+  font-weight: bold;
+}
+
+/* Styles pour les valeurs d'informations */
+.user-profile div:nth-child(odd) {
+  color: #555;
+}
+
+/* Styles pour le lien "Changer mon mot de passe" */
+.user-profile a {
+  text-decoration: none;
+  color: #2980b9;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.user-profile a:hover {
+  color: #1abc9c;
+}
+
+/* Animation pour le lien "Changer mon mot de passe" */
+.user-profile a:hover {
+  animation: bounce 0.5s ease infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-15px);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+>>>>>>>db594cb69b4580a2e219526926585c8810eef74a #container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33vw;
+  height: 33vh;
+  margin: 0 auto;
+  margin-top: calc((50vh - 70px) / 2);
+}
+
+#container #title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container #list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles pour le conteneur du profil utilisateur */
+.user-profile {
+  margin: 20px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  max-width: 400px;
+  background: linear-gradient(to right, #f7f7f7, #ffffff);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.user-profile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Styles pour chaque section d'informations du profil */
+.user-profile div {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.user-profile div:last-child {
+  margin-bottom: 0;
+}
+
+/* Styles pour les étiquettes d'informations */
+.user-profile div:nth-child(even) {
+  color: #2980b9;
+  font-weight: bold;
+}
+
+/* Styles pour les valeurs d'informations */
+.user-profile div:nth-child(odd) {
+  color: #555;
+}
+
+/* Styles pour le lien "Changer mon mot de passe" */
+.user-profile a {
+  text-decoration: none;
+  color: #2980b9;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.user-profile a:hover {
+  color: #1abc9c;
+}
+
+/* Animation pour le lien "Changer mon mot de passe" */
+.user-profile a:hover {
+  animation: bounce 0.5s ease infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-15px);
+  }
+
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
