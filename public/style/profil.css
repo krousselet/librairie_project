@@ -1,67 +1,49 @@
-@charset "UTF-8";
-/* Styles pour le conteneur du profil utilisateur */
 .user-profile {
-  margin: 20px auto;
-  padding: 30px;
-  border: 1px solid #ccc;
-  max-width: 400px;
-  background: linear-gradient(to right, #f7f7f7, #ffffff);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  transition: all 0.3s ease-in-out;
-}
-.user-profile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
 }
 
-/* Styles pour chaque section d'informations du profil */
 .user-profile div {
-  margin-bottom: 15px;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
 }
 
 .user-profile div:last-child {
   margin-bottom: 0;
 }
 
-/* Styles pour les étiquettes d'informations */
-.user-profile div:nth-child(even) {
-  color: #2980b9;
-  font-weight: bold;
+/* Animation pour les liens a */
+@keyframes link-animation {
+  0% {
+    transform: scale(1);
+    background-color: #3498db;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #2980b9;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #3498db;
+  }
 }
-
-/* Styles pour les valeurs d'informations */
-.user-profile div:nth-child(odd) {
-  color: #555;
-}
-
-/* Styles pour le lien "Changer mon mot de passe" */
 .user-profile a {
-  text-decoration: none;
-  color: #2980b9;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: #fff;
+  /* Texte en blanc */
+  border-radius: 5px;
   font-weight: bold;
-  transition: color 0.3s ease-in-out;
-}
-.user-profile a:hover {
-  color: #1abc9c;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* Animation pour le lien "Changer mon mot de passe" */
 .user-profile a:hover {
-  animation: bounce 0.5s ease infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-15px);
-  }
-  60% {
-    transform: translateY(-10px);
-  }
+  animation: link-animation 0.5s alternate;
+  color: #fff;
+  /* Assure que le texte reste en blanc au survol */
 }/*# sourceMappingURL=profil.css.map */
