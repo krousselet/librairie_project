@@ -17,10 +17,10 @@ class Emprunt
     #[ORM\OneToOne(inversedBy: 'emprunt', cascade: ['persist', 'remove'])]
     private ?Exemplaires $id_exemplaire = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $dateEmprunt = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $dateRetour = null;
 
     #[ORM\OneToOne(mappedBy: 'id_emprunt', cascade: ['persist', 'remove'])]
