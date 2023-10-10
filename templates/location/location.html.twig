@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Location{% endblock %}
+
+{% block body %}
+{% block header %}
+{{ parent() }}
+{% endblock %}
+<div id="container">
+    <div id="title-container">
+        <h2>Locations disponibles :</h2>
+    </div>
+    <div id="list-container">
+    <ul>
+    {% for livre in livres %} 
+        <li> {{app.livres.titre}} </li>
+    {% endfor %}
+    </ul>
+    </div>
+</div>
+{% endblock %}
