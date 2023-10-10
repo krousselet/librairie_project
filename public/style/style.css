@@ -142,4 +142,19 @@ a {
   padding: 5px;
 }
 
+/* profil.scss */
+.user-profile {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.user-profile div {
+  margin-bottom: 10px;
+}
+
+.user-profile a {
+  text-decoration: none;
+  color: blue;
+}
+
 /*# sourceMappingURL=style.css.map */
