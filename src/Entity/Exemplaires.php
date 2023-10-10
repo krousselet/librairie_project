@@ -20,11 +20,11 @@ class Exemplaires
     #[ORM\OneToOne(inversedBy: 'exemplaires', cascade: ['persist', 'remove'])]
     private ?Livres $id_livre = null;
 
-    #[ORM\Column(type: Types::ARRAY)]
+    #[ORM\Column(type: Types::JSON)]
     private array $etat = [];
 
-    #[ORM\Column(type: Types::ARRAY)]
-    private array $statut = [];
+    #[ORM\Column(type: Types::BOOLEAN)]
+    private bool $statut;
 
     #[ORM\OneToOne(mappedBy: 'id_exemplaire', cascade: ['persist', 'remove'])]
     private ?Livres $livres = null;
@@ -73,12 +73,12 @@ class Exemplaires
         return $this;
     }
 
-    public function getStatut(): array
+    public function getStatut(): bool
     {
         return $this->statut;
     }
 
-    public function setStatut(array $statut): static
+    public function setStatut(bool $statut): static
     {
         $this->statut = $statut;
 

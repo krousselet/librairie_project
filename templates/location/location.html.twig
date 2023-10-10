@@ -14,7 +14,7 @@
     <ul>
     {% for livre in livres %}
     <li>
-        {{ livre.titre }}  {# assuming each book has a 'titre' property #}
+        {{ livre.titre }} par : {{ livre.auteur }} {# assuming each book has a 'titre' property #}
     </li>
 {% endfor %}
     </ul>
