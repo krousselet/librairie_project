@@ -120,7 +120,8 @@ a {
   align-items: center;
   background-color: rgba(128, 128, 128, 0.26);
   box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.212);
-  backdrop-filter: 10px;
+  -webkit-backdrop-filter: 10px;
+          backdrop-filter: 10px;
   outline: 1px white;
   margin-top: calc((50vh - 70px) / 2);
 }
@@ -229,6 +230,4 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,15 @@
+#form-container {
+  margin: 0 auto;
+  border-radius: 7px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.26);
+  box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.212);
+  -webkit-backdrop-filter: 10px;
+          backdrop-filter: 10px;
+  outline: 1px white;
+  margin-top: calc((50vh - 70px) / 2);
+}/*# sourceMappingURL=forms.css.map */

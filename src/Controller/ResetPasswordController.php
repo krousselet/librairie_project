@@ -41,6 +41,7 @@ class ResetPasswordController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            //  dd($form->get('email')->getData());
             return $this->processSendingPasswordResetEmail(
                 $form->get('email')->getData(),
                 $mailer,
