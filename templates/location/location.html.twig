@@ -12,9 +12,11 @@
     </div>
     <div id="list-container">
     <ul>
-    {% for livre in livres %} 
-        <li> {{app.livres.titre}} </li>
-    {% endfor %}
+    {% for livre in livres %}
+    <li>
+        {{ livre.titre }}  {# assuming each book has a 'titre' property #}
+    </li>
+{% endfor %}
     </ul>
     </div>
 </div>
