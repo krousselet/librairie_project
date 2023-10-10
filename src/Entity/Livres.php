@@ -20,7 +20,7 @@ class Livres
     #[ORM\Column(length: 255)]
     private ?string $auteur = null;
 
-    #[ORM\Column(type: Types::ARRAY, nullable: true)]
+    #[ORM\Column(type: Types::JSON, nullable: true)]
     private ?array $editeur = null;
 
     #[ORM\Column(length: 13)]

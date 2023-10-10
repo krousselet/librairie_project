@@ -2,9 +2,10 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\LivresRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MainController extends AbstractController
 {
@@ -18,5 +19,12 @@ class MainController extends AbstractController
     public function profil(): Response
     {
         return $this->render('profil.html.twig');
+    }
+    #[Route('/location', name: 'app_location')]
+    public function location(LivresRepository $livreRepository): Response
+    {
+        return $this->render('location/location.html.twig', [
+            'livres' => $livreRepository->findAll(),
+        ]);
     }
 }
