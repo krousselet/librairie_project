@@ -142,19 +142,26 @@ a {
   padding: 5px;
 }
 
-/* profil.scss */
-.user-profile {
-  font-family: Arial, sans-serif;
-  color: #333;
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33vw;
+  height: 33vh;
+  margin: 0 auto;
+  margin-top: calc((50vh - 70px) / 2);
 }
-
-.user-profile div {
-  margin-bottom: 10px;
+#container #title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.user-profile a {
-  text-decoration: none;
-  color: blue;
+#container #list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
