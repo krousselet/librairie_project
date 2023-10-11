@@ -20,5 +20,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 33vw;
+        margin: 0 auto;
+
+        #row {
+            display: flex;
+
+            #order {
+                padding: 5px;
+                border-radius: 7px;
+            }
+        }
     }
 }
