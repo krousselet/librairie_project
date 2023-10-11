@@ -66,6 +66,5 @@ class Auteur
     public function __toString()
     {
         return $this->nomEntie;
-        // return $this->prenom;
     }
 }
