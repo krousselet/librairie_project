@@ -2,10 +2,12 @@
 
 namespace App\Controller;
 
+use App\Form\CommandeFormType;
 use App\Repository\LivresRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Exemplaires;
 
 class MainController extends AbstractController
 {
@@ -25,6 +27,15 @@ class MainController extends AbstractController
     {
         return $this->render('location/location.html.twig', [
             'livres' => $livreRepository->findAll(),
+        ]);
+    }
+    #[Route('/commande', name: 'app_commande')]
+    public function commande(): Response
+    {
+        $exemplaire = new Exemplaires();
+        $form = $this->createForm(CommandeFormType::class, $exemplaire);
+        return $this->render('location/commande.html.twig', [
+            'commandeForm' => $form->createView()
         ]);
     }
 }

@@ -13,9 +13,11 @@
     <div id="list-container">
     <ul>
     {% for livre in livres %}
-    <li>
-        {{ livre.titre }} par : {{ livre.auteur }} {# assuming each book has a 'titre' property #}
+    {% if livre.quantite > 0 %}
+    <li id="row">
+        {{ livre.titre }} par : {{ livre.auteur }} <a id="order" href="{{path('app_commande')}}">Commander</a></button>
     </li>
+    {% endif %}
 {% endfor %}
     </ul>
     </div>
