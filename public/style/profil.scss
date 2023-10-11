@@ -1,52 +1,71 @@
 .user-profile {
-    background-color: #f5f5f5;
+    background-color: #3498db;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
-.user-profile div {
-    margin-bottom: 10px;
-    font-size: 18px;
-    color: #333;
+.user-profile>div {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #fff;
 }
 
-.user-profile div:last-child {
+.user-profile>div:last-child {
     margin-bottom: 0;
-}
-
-/* Animation pour les liens a */
-@keyframes link-animation {
-    0% {
-        transform: scale(1);
-        background-color: #3498db;
-    }
-
-    50% {
-        transform: scale(1.1);
-        background-color: #2980b9;
-    }
-
-    100% {
-        transform: scale(1);
-        background-color: #3498db;
-    }
 }
 
 .user-profile a {
     display: inline-block;
-    padding: 8px 16px;
-    background-color: #3498db;
+    padding: 10px 20px;
+    background-color: #e74c3c;
     color: #fff;
-    /* Texte en blanc */
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    align-self: flex-end;
+    margin-top: 15px;
+    font-family: 'Helvetica', sans-serif;
+    text-decoration: none;
+}
+
+@keyframes link-animation {
+    0% {
+        transform: scale(1);
+        background-color: #e74c3c;
+    }
+
+    50% {
+        transform: scale(1.1);
+        background-color: #c0392b;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: #e74c3c;
+    }
 }
 
 .user-profile a:hover {
     animation: link-animation 0.5s alternate;
     color: #fff;
-    /* Assure que le texte reste en blanc au survol */
+    background-color: #c0392b;
+}
+
+.user-profile:hover {
+    background-color: #2980b9;
+}
+
+.user-profile h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.user-profile a:visited {
+    color: #fff;
 }
