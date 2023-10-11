@@ -59,10 +59,12 @@ class AppFixtures extends Fixture
 
             $manager->persist($emprunt);
 
-            // $exemplaire = new Exemplaires();
-            // $exemplaire->setIdUtilisateur($user[$i]);
+            $exemplaire = new Exemplaires();
+            $exemplaire->setIdUtilisateur($user[$i]);
             // $exemplaire->setLivres($livre->getTitre($i));
-            // $exemplaire->setStatut($faker->boolean());
+            $exemplaire->setStatut($livre->getQuantite() > 0);
+            $manager->persist($exemplaire);
+            dd($livre->getQuantite());
         }
         $manager->flush();
     }
