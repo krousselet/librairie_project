@@ -8,15 +8,17 @@
 {% endblock %}
 
 {% block body %}
-{% block header %}
-{{ parent() }}
-{% endblock header %}
-<div class="user-profile">
-    <div>User name: {{ app.user.username }}</div>
+    {% block header %}
+        {{ parent() }}
+    {% endblock header %}
+    <div class="user-profile">
+    <div>User name: <div>{{ app.user.username }}</div></div>
+    <div>First name: <div>{{ app.user.firstname }}</div></div>
+    <div>Last name: <div>{{ app.user.lastname }}</div></div>
+    <div>Email: <div>{{ app.user.email }}</div></div>
+    <div>Address: <div>{{ app.user.address }}</div></div>
+
     <a href="#">Changer mon mot de passe</a>
-    <div>First name: {{ app.user.firstname }}</div>
-    <div>Last name: {{ app.user.lastname }}</div>
-    <div>Email: {{ app.user.email }}</div>
-    <div>Address: {{ app.user.address }}</div>
-</div>
+    </div>
+
 {% endblock body %}
