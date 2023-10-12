@@ -12,13 +12,12 @@
         {{ parent() }}
     {% endblock header %}
     <div class="user-profile">
-    <div>User name: <div>{{ app.user.username }}</div></div>
-    <div>First name: <div>{{ app.user.firstname }}</div></div>
-    <div>Last name: <div>{{ app.user.lastname }}</div></div>
-    <div>Email: <div>{{ app.user.email }}</div></div>
-    <div>Address: <div>{{ app.user.address }}</div></div>
+        <div>User name: <div>{{ app.user.username }}</div></div>
+        <div>First name: <div>{{ app.user.firstname }}</div></div>
+        <div>Last name: <div>{{ app.user.lastname }}</div></div>
+        <div>Email: <div>{{ app.user.email }}</div></div>
+        <div>Address: <div>{{ app.user.address }}</div></div>
 
-    <a href="#">Changer mon mot de passe</a>
+        <a href="#" class="change-password-link">Changer mon mot de passe</a>
     </div>
-
 {% endblock body %}
