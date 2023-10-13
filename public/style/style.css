@@ -210,6 +210,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 33vw;
+  margin: 0 auto;
+}
+#container #list-container #row {
+  display: flex;
+}
+#container #list-container #row #order {
+  padding: 5px;
+  border-radius: 7px;
 }
 
 /*# sourceMappingURL=style.css.map */

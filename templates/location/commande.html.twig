@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commande{% endblock %}
+
+{% block body %}
+{% block header %}
+{{ parent() }}
+{% endblock %}
+ {{ form_errors(commandeForm) }}
+
+    {{ form_start(commandeForm) }}
+        {{ form_row(commandeForm.etat, {
+            label: 'Etat :'
+        }) }}
+        
+    {{ form_end(commandeForm) }}
+
+{% endblock %}

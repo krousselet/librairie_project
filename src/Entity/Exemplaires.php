@@ -20,11 +20,11 @@ class Exemplaires
     #[ORM\OneToOne(inversedBy: 'exemplaires', cascade: ['persist', 'remove'])]
     private ?Livres $id_livre = null;
 
-    #[ORM\Column(type: Types::ARRAY)]
+    #[ORM\Column(type: Types::JSON)]
     private array $etat = [];
 
-    #[ORM\Column(type: Types::ARRAY)]
-    private array $statut = [];
+    #[ORM\Column(type: Types::BOOLEAN)]
+    private bool $statut = false;
 
     #[ORM\OneToOne(mappedBy: 'id_exemplaire', cascade: ['persist', 'remove'])]
     private ?Livres $livres = null;
@@ -73,39 +73,29 @@ class Exemplaires
         return $this;
     }
 
-    public function getStatut(): array
-    {
-        return $this->statut;
-    }
 
-    public function setStatut(array $statut): static
-    {
-        $this->statut = $statut;
 
-        return $this;
-    }
+    // public function getLivres(): ?Livres
+    // {
+    //     return $this->livres;
+    // }
 
-    public function getLivres(): ?Livres
-    {
-        return $this->livres;
-    }
+    // public function setLivres(?Livres $livres): static
+    // {
+    //     // unset the owning side of the relation if necessary
+    //     if ($livres === null && $this->livres !== null) {
+    //         $this->livres->setIdExemplaire(null);
+    //     }
 
-    public function setLivres(?Livres $livres): static
-    {
-        // unset the owning side of the relation if necessary
-        if ($livres === null && $this->livres !== null) {
-            $this->livres->setIdExemplaire(null);
-        }
+    //     // set the owning side of the relation if necessary
+    //     if ($livres !== null && $livres->getIdExemplaire() !== $this) {
+    //         $livres->setIdExemplaire($this);
+    //     }
 
-        // set the owning side of the relation if necessary
-        if ($livres !== null && $livres->getIdExemplaire() !== $this) {
-            $livres->setIdExemplaire($this);
-        }
+    //     $this->livres = $livres;
 
-        $this->livres = $livres;
-
-        return $this;
-    }
+    //     return $this;
+    // }
 
     public function getEmprunt(): ?Emprunt
     {
@@ -127,5 +117,25 @@ class Exemplaires
         $this->emprunt = $emprunt;
 
         return $this;
+    }
+
+
+    public function getStatut(): bool
+    {
+        return $this->statut;
+    }
+
+    public function setStatut(bool $statut): static
+    {
+        return $this;
+    }
+
+    public function updateExemplairesAvailability(Livres $livre)
+    {
+        if ($livre->getQuantite() === 0) {
+            $this->setStatut(false);
+        } else {
+            $this->setStatut(true);
+        }
     }
 }
