@@ -1,0 +1,26 @@
+{
+  "folders": [
+	{
+		"path": "../../../../../../wamp64/www/php"
+	},
+	{
+		"path": "../../../../../../wamp64/www/wordpress/wp-content/themes/baseThemeWP2022-main"
+	},
+	{
+		"path": "../../../../../../wamp64/www/wordpress/wp-content/plugins"
+	},
+	{
+		"path": "../../../../../../wamp64/www/wordpress/wp-content/themes/theme-ecf"
+	},
+	{
+		"path": "../../../Formation/vuejs"
+	},
+	{
+		"path": "../../../Maroc formation"
+	},
+	{
+		"path": "../.."
+	}
+],
+  "settings": {}
+}

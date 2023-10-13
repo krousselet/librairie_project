@@ -1,4 +1,21 @@
+
+<div id="container">
+        {# <ul>
+            <div id="row-edit"><li>Id :</li><span>{{ user.id }}</span></div>
+            <div id="row-edit"><li>Username :</li><span>{{ user.username }}</span></div>
+            <div id="row-edit"><li>Email :</li><span>{{ user.email }}</span></div>
+            <div id="row-edit"><li>FirstName :</li><span>{{ user.firstName }}</span></div>
+            <div id="row-edit"><li>LastName :</li><span>{{ user.lastName }}</span></div>
+            <div id="row-edit"><li>Address :</li><span>{{ user.address }}</span></div>
+            <div id="row-button">
+                <a href="{{ path('app_user_index') }}">Retour</a>
+                <a href="{{ path('app_user_edit', {'id': user.id}) }}">Editer</a>
+            </div>
+        </ul> #}
+    
 {{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    
+    <button class="btn-perso">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
+</div>

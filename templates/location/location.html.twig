@@ -15,7 +15,7 @@
     {% for livre in livres %}
     {% if livre.quantite > 0 %}
     <li id="row">
-        {{ livre.titre }} par : {{ livre.auteur }} <a id="order" href="{{path('app_commande')}}">Commander</a></button>
+        <span id="book-title">{{ livre.titre }}</span> par : {{ livre.auteur }} <a id="order" href="{{path('app_commande')}}">Commander</a></button>
     </li>
     {% endif %}
 {% endfor %}

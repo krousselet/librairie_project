@@ -12,6 +12,8 @@ use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
+use function Symfony\Component\Clock\now;
+
 class AppFixtures extends Fixture
 {
 
@@ -55,7 +57,8 @@ class AppFixtures extends Fixture
 
 
             $emprunt = new Emprunt();
-            $emprunt->setDateEmprunt($faker->dateTime());
+            $now = new \DateTime();
+            $emprunt->setDateEmprunt($now);
 
             $manager->persist($emprunt);
 

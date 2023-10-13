@@ -5,47 +5,22 @@
 {% block body %}
     <h1>User</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ user.id }}</td>
-            </tr>
-            <tr>
-                <th>Username</th>
-                <td>{{ user.username }}</td>
-            </tr>
-            {# <tr>
-                <th>Roles</th>
-                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-            </tr> #}
-            {# <tr>
-                <th>Password</th>
-                <td>{{ user.password }}</td>
-            </tr> #}
-            <tr>
-                <th>Email</th>
-                <td>{{ user.email }}</td>
-            </tr>
-            <tr>
-                <th>FirstName</th>
-                <td>{{ user.firstName }}</td>
-            </tr>
-            <tr>
-                <th>LastName</th>
-                <td>{{ user.lastName }}</td>
-            </tr>
-            <tr>
-                <th>Address</th>
-                <td>{{ user.address }}</td>
-            </tr>
-            
-        </tbody>
-    </table>
+     <div id="container">
+        <ul>
+            <div id="row-edit"><li>Id :</li><span>{{ user.id }}</span></div>
+            <div id="row-edit"><li>Username :</li><span>{{ user.username }}</span></div>
+            <div id="row-edit"><li>Email :</li><span>{{ user.email }}</span></div>
+            <div id="row-edit"><li>FirstName :</li><span>{{ user.firstName }}</span></div>
+            <div id="row-edit"><li>LastName :</li><span>{{ user.lastName }}</span></div>
+            <div id="row-edit"><li>Address :</li><span>{{ user.address }}</span></div>
+            <div id="row-button">
+                <a href="{{ path('app_user_index') }}">Retour</a>
+                <a href="{{ path('app_user_edit', {'id': user.id}) }}">Editer</a>
+            </div>
+        </ul>
+    </div>
 
-    <a href="{{ path('app_user_index') }}">back to list</a>
+    
 
-    <a href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
-
-    {{ include('user/_delete_form.html.twig') }}
+    {# {{ include('user/_delete_form.html.twig') }} #}
 {% endblock %}
