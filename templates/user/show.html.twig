@@ -3,9 +3,10 @@
 {% block title %}User{% endblock %}
 
 {% block body %}
-    <h1>User</h1>
+    
 
      <div id="container">
+     <h1>Vos informations {{app.user.username}}</h1>
         <ul>
             <div id="row-edit"><li>Id :</li><span>{{ user.id }}</span></div>
             <div id="row-edit"><li>Username :</li><span>{{ user.username }}</span></div>
@@ -14,8 +15,8 @@
             <div id="row-edit"><li>LastName :</li><span>{{ user.lastName }}</span></div>
             <div id="row-edit"><li>Address :</li><span>{{ user.address }}</span></div>
             <div id="row-button">
-                <a href="{{ path('app_user_index') }}">Retour</a>
-                <a href="{{ path('app_user_edit', {'id': user.id}) }}">Editer</a>
+                <a class="btn-perso" href="{{ path('app_user_index') }}">Retour</a>
+                <a class="btn-perso" href="{{ path('app_user_edit', {'id': user.id}) }}">Editer</a>
             </div>
         </ul>
     </div>

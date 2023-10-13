@@ -21,10 +21,13 @@ class CommandeController extends AbstractController
         $form = $this->createForm(CommandeFormType::class, $emprunt);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $emprunt->setDateemprunt($now);
+            // $emprunt->setDateRetour();
+            // $emprunt->setDateRetour();
             $entityManager->persist($emprunt);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_commande', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_commande');
         }
 
         return $this->render('location/commande.html.twig', [

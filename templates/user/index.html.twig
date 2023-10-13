@@ -6,9 +6,11 @@
 {% block header %}
 {{parent()}}
 {% endblock %}
-    <h1>User index</h1>
+    
 
     <div id="container">
+    <h1>Vos informations {{app.user.username}}</h1>
+    <br>
         <ul>
             <div id="row-edit"><li>Id :</li><span>{{ user.id }}</span></div>
             <div id="row-edit"><li>Username :</li><span>{{ user.username }}</span></div>

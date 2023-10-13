@@ -129,8 +129,8 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(128, 128, 128, 0.26);
-  box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.212);
+  background: linear-gradient(to right, #f7f7f7, #ffffff);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   backdrop-filter: 10px;
   outline: 1px white;
   margin-top: calc((50vh - 70px) / 2);
@@ -244,7 +244,9 @@ ul {
 }
 
 #container {
-  background-color: rgba(128, 128, 128, 0.562);
+  background: linear-gradient(to right, #f7f7f7, #ffffff);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
 }
 #container ul #row-edit {
   min-width: 350px;
