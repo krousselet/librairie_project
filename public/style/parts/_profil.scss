@@ -28,13 +28,13 @@
 }
 
 /* Styles pour les étiquettes d'informations */
-.user-profile div:nth-child(even) {
+.user-profile div:nth-child() {
   color: #2980b9;
   font-weight: bold;
 }
 
 /* Styles pour les valeurs d'informations */
-.user-profile div:nth-child(odd) {
+.user-profile div:nth-child() {
   color: #555;
 }
 
@@ -47,29 +47,5 @@
 
   &:hover {
     color: #1abc9c;
-  }
-}
-
-/* Animation pour le lien "Changer mon mot de passe" */
-.user-profile a:hover {
-  animation: bounce 0.5s ease infinite;
-}
-
-@keyframes bounce {
-
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-
-  40% {
-    transform: translateY(-15px);
-  }
-
-  60% {
-    transform: translateY(-10px);
   }
 }
