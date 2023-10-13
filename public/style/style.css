@@ -188,15 +188,26 @@ ul {
 }
 
 /* Styles pour le lien "Changer mon mot de passe" */
-.user-profile a {
-  text-decoration: none;
-  color: #2980b9;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-  float: right;
+.button-row {
+  display: flex;
+  justify-content: flex-end;
 }
-.user-profile a:hover {
-  color: #1abc9c;
+.button-row .button {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: -10px -5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #4CAF50;
+  background-color: #4CAF50;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+.button-row .button:hover {
+  background-color: #45a049;
 }
 
 #container {
