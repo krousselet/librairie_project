@@ -40,7 +40,7 @@ class ActionVoter extends Voter
         // ... (check conditions and return true to grant permission) ...
         switch ($attribute) {
             case self::EDIT:
-                return $user->getId() === $subject->getId();
+                // return $user->getId() === $subject->getId();
                 break;
             case self::VIEW:
                 // logic to determine if the user can VIEW
