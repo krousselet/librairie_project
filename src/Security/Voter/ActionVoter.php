@@ -5,6 +5,7 @@ namespace App\Security\Voter;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\Voter;
 use Symfony\Component\Security\Core\User\UserInterface;
+use App\Entity\User;
 
 class ActionVoter extends Voter
 {
@@ -25,7 +26,7 @@ class ActionVoter extends Voter
         $user = $token->getUser();
         // if the user is anonymous, do not grant access
         // si l'utilisateur est anonyme (invité), ne pas autoriser l'accès
-        if (!$user instanceof UserInterface) {
+        if (!$user instanceof User) {
             return false;
         }
 
@@ -40,7 +41,7 @@ class ActionVoter extends Voter
         // ... (check conditions and return true to grant permission) ...
         switch ($attribute) {
             case self::EDIT:
-                // return $user->getId() === $subject->getId();
+                return $user->getId() === $subject->getId();
                 break;
             case self::VIEW:
                 // logic to determine if the user can VIEW

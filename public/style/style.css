@@ -109,6 +109,17 @@ a {
   color: black;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.btn-perso {
+  padding: 5px;
+  background-color: #ff8800;
+  border-radius: 7px;
+  color: white;
+}
+
 #form-container {
   margin: 0 auto;
   border-radius: 7px;
@@ -267,6 +278,34 @@ body {
 #container #row {
   display: flex;
   justify-content: center;
+}
+
+#container {
+  background-color: rgba(128, 128, 128, 0.562);
+}
+#container ul #row-edit {
+  min-width: 350px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+}
+#container ul #row-button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+#container ul #row-button .btn-perso {
+  padding: 5px;
+  background-color: #ff8800;
+  border-radius: 7px;
+  color: white;
+}
+#container ul #row-button button {
+  padding: 5px;
+  background-color: #ff8800;
+  border-radius: 7px;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

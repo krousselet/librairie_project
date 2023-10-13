@@ -1,0 +1,37 @@
+#container {
+    background-color: rgba(128, 128, 128, 0.562);
+
+    ul {
+
+        #row-edit {
+            min-width: 350px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px auto;
+
+        }
+
+        #row-button {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-evenly;
+
+            .btn-perso {
+                padding: 5px;
+                background-color: #ff8800;
+                border-radius: 7px;
+                color: white;
+            }
+
+            button {
+                padding: 5px;
+                background-color: #ff8800;
+                border-radius: 7px;
+                color: white;
+            }
+
+        }
+    }
+
+}
