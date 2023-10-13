@@ -76,6 +76,14 @@ class UserController extends AbstractController
         ]);
     }
 
+    #[Route('/{id}/edit', name: 'app_user_edit', methods: ['GET', 'POST'])]
+    public function editProfile(User $user)
+    {
+        $this->denyAccessUnlessGranted('EDIT', $user);
+
+        // rest of your edit logic...
+    }
+
     #[Route('/{id}', name: 'app_user_delete', methods: ['POST'])]
     public function delete(Request $request, User $user, EntityManagerInterface $entityManager): Response
     {

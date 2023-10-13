@@ -147,7 +147,12 @@ body {
 }
 
 .user-profile {
-  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  margin: 0 auto;
+  height: 80vh;
   padding: 30px;
   border: 2px solid #e0e0e0;
   max-width: 500px;
@@ -157,10 +162,16 @@ body {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .user-profile:hover {
-  transform: translateY(-5px);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 .user-profile div {
+  position: relative;
+  left: -25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 250px;
   margin-bottom: 15px;
   padding: 10px;
   border-radius: 8px;
@@ -169,25 +180,49 @@ body {
 .user-profile div:last-child {
   margin-bottom: 0;
 }
-.user-profile .user-profile > div > div {
-  color: #3498db;
+.user-profile #navigation-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-width: 90%;
+  align-items: center;
+  margin: 0 auto;
+  left: 50px;
 }
-.user-profile .change-password-link {
+.user-profile #navigation-container .change-password-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
-  padding: 8px 10px;
-  border-radius: 10px;
-  background-color: #3498db;
+  padding: 5px;
+  border-radius: 7px;
+  background-color: #ff8800;
   opacity: 0.9;
   float: right;
-  margin-top: -9px;
-  margin-right: 0px;
+  min-width: 220px;
   transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-.user-profile .change-password-link:hover {
+.user-profile #navigation-container .change-password-link:hover {
   opacity: 1;
-  background-color: #2980b9;
+  background-color: red;
+}
+.user-profile #navigation-container .user-profile > div > div {
+  color: #3498db;
+}
+
+.modify-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin-top: 5px;
+  background-color: #ff8800;
+  color: white;
+  border-radius: 7px;
+  min-width: 220px;
 }
 
 #container {

@@ -8,8 +8,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 class ActionVoter extends Voter
 {
-    public const EDIT = 'POST_EDIT'; // ça, c'est pour l'édition des infos
-    public const VIEW = 'POST_VIEW'; // ça, c'est pour le visionnage des infos
+    public const EDIT = 'EDIT'; // ça, c'est pour l'édition des infos
+    public const VIEW = 'VIEW'; // ça, c'est pour le visionnage des infos
 
     protected function supports(string $attribute, mixed $subject): bool
     {
@@ -29,11 +29,18 @@ class ActionVoter extends Voter
             return false;
         }
 
+        // $post = $subject;
+
+        // return match ($attribute) {
+        //     self::VIEW => $this->canView($post, $user),
+        //     self::EDIT => $this->canEdit($post, $user),
+        //     default => throw new \LogicException('This code should not be reached!')
+        // };
+
         // ... (check conditions and return true to grant permission) ...
         switch ($attribute) {
             case self::EDIT:
-                // logic to determine if the user can EDIT
-                // return true or false
+                return $user->getId() === $subject->getId();
                 break;
             case self::VIEW:
                 // logic to determine if the user can VIEW

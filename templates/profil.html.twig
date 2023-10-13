@@ -17,7 +17,9 @@
         <div>Last name: <div>{{ app.user.lastname }}</div></div>
         <div>Email: <div>{{ app.user.email }}</div></div>
         <div>Address: <div>{{ app.user.address }}</div></div>
-
-        <a href="#" class="change-password-link">Changer mon mot de passe</a>
+        <div id="navigation-container">
+        <a href="{{path('app_forgot_password_request')}}" class="change-password-link">Changer mon mot de passe</a>
+        <a href="{{path('app_user_index')}}" class="modify-info">Modifier mes informations</a>
+        </div>
     </div>
 {% endblock body %}
