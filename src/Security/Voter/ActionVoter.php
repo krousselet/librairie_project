@@ -46,6 +46,7 @@ class ActionVoter extends Voter
             case self::VIEW:
                 // logic to determine if the user can VIEW
                 // return true or false
+                return $user->getId() === $subject->getId();
                 break;
         }
 
