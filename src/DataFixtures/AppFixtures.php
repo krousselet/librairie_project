@@ -6,13 +6,10 @@ use Faker\Factory;
 use App\Entity\User;
 use App\Entity\Auteur;
 use App\Entity\Livres;
-use App\Entity\Emprunt;
 use App\Entity\Exemplaires;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
-
-use function Symfony\Component\Clock\now;
 
 class AppFixtures extends Fixture
 {
@@ -52,22 +49,15 @@ class AppFixtures extends Fixture
             $livre->setTitre($faker->title(8));
             $livre->setAuteur($auteurs[$i]->getNomEntie());
             $livre->setIsbn($faker->isbn13());
-            $livre->setQuantite($faker->numberBetween(0, 100000));
+
             $manager->persist($livre);
-
-
-            $emprunt = new Emprunt();
-            $now = new \DateTime();
-            $emprunt->setDateEmprunt($now);
-
-            $manager->persist($emprunt);
 
             $exemplaire = new Exemplaires();
             $exemplaire->setIdUtilisateur($user[$i]);
             // $exemplaire->setLivres($livre->getTitre($i));
-            $exemplaire->setStatut($livre->getQuantite() > 0);
+            $exemplaire->setQuantite($faker->numberBetween(0, 100000));
+            $exemplaire->setStatut($exemplaire->getQuantite() > 0);
             $manager->persist($exemplaire);
-            dd($livre->getQuantite());
         }
         $manager->flush();
     }

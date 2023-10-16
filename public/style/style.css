@@ -121,6 +121,22 @@ ul {
   color: white;
 }
 
+table thead,
+table tr,
+table td {
+  outline: 1px solid black;
+}
+
+tr {
+  width: 0 auto;
+}
+
+td {
+  width: 0 auto;
+  min-width: 100px;
+  padding: 5px;
+}
+
 #form-container {
   margin: 0 auto;
   border-radius: 7px;
@@ -214,7 +230,7 @@ ul {
   justify-content: center;
   align-items: center;
   width: 33vw;
-  height: 33vh;
+  height: 55vh;
   margin: 0 auto;
   margin-top: calc((50vh - 70px) / 2);
 }
@@ -229,11 +245,12 @@ ul {
   justify-content: center;
   align-items: center;
   width: 33vw;
+  height: inherit;
   margin: 0 auto;
 }
 #container #list-container #row {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: inherit;
   margin: 10px auto;
@@ -245,6 +262,11 @@ ul {
 }
 #container #list-container #row #book-title {
   text-decoration: underline;
+}
+#container #list-container #row #commande-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #container #row {

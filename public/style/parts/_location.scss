@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     width: 33vw;
-    height: 33vh;
+    height: 55vh;
     margin: 0 auto;
     margin-top: calc((50vh - 70px) / 2);
 
@@ -21,11 +21,12 @@
         justify-content: center;
         align-items: center;
         width: 33vw;
+        height: inherit;
         margin: 0 auto;
 
         #row {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             // word-spacing: 3px;
             width: inherit;
@@ -40,6 +41,12 @@
             #book-title {
                 text-decoration: underline;
 
+            }
+
+            #commande-details {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
             }
         }
     }

@@ -15,10 +15,11 @@
         
         <div id="row">
         {# {{ all }} #}
+        {{ now }}
         {{ form_row(commandeForm.dateRetour, {
             label: 'Date de retour : '
         }) }}
-        <a href="validate">Valider</a>
+        <a href="{{path('app_location')}}">Valider</a>
         </div>
     {{ form_end(commandeForm) }}
     </div>

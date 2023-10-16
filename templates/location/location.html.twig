@@ -3,23 +3,37 @@
 {% block title %}Location{% endblock %}
 
 {% block body %}
-{% block header %}
-{{ parent() }}
-{% endblock %}
-<div id="container">
-    <div id="title-container">
-        <h2>Locations disponibles :</h2>
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+    <div id="container">
+        <div id="title-container">
+            <h2>Locations disponibles :</h2>
+        </div>
+        <div id="list-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Titre du Livre</th>
+                        <th>Auteur</th>
+                        <th>Quantité</th>
+                        <th>Commande</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for exemplaire in exemplaires %}
+                        {% set livre = livres[loop.index0] %}
+                        {% if exemplaire.quantite > 0 %}
+                            <tr>
+                                <td>{{ livre.titre }}</td>
+                                <td>{{ livre.auteur }}</td>
+                                <td>{{ exemplaire.quantite }}</td>
+                                <td><a href="{{ path('app_commande') }}">Commander</a></td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div id="list-container">
-    <ul>
-    {% for livre in livres %}
-    {% if livre.quantite > 0 %}
-    <li id="row">
-        <span id="book-title">{{ livre.titre }}</span> par : {{ livre.auteur }} <a id="order" href="{{path('app_commande')}}">Commander</a></button>
-    </li>
-    {% endif %}
-{% endfor %}
-    </ul>
-    </div>
-</div>
 {% endblock %}

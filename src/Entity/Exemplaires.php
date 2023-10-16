@@ -26,6 +26,9 @@ class Exemplaires
     #[ORM\Column(type: Types::BOOLEAN)]
     private bool $statut = false;
 
+    #[ORM\Column]
+    private ?int $quantite = 0;
+
     #[ORM\OneToOne(mappedBy: 'id_exemplaire', cascade: ['persist', 'remove'])]
     private ?Livres $livres = null;
 
@@ -57,6 +60,18 @@ class Exemplaires
     public function setIdLivre(?Livres $id_livre): static
     {
         $this->id_livre = $id_livre;
+
+        return $this;
+    }
+
+    public function getQuantite(): int
+    {
+        return $this->quantite;
+    }
+
+    public function setQuantite(int $quantite)
+    {
+        $this->quantite = $quantite;
 
         return $this;
     }
@@ -119,6 +134,14 @@ class Exemplaires
         return $this;
     }
 
+    public function updateExemplairesAvailability($exemplaire)
+    {
+        if ($exemplaire->getQuantite() === 0) {
+            $this->setStatut(false);
+        } else {
+            $this->setStatut(true);
+        }
+    }
 
     public function getStatut(): bool
     {
@@ -128,14 +151,5 @@ class Exemplaires
     public function setStatut(bool $statut): static
     {
         return $this;
-    }
-
-    public function updateExemplairesAvailability(Livres $livre)
-    {
-        if ($livre->getQuantite() === 0) {
-            $this->setStatut(false);
-        } else {
-            $this->setStatut(true);
-        }
     }
 }
