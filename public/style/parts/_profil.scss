@@ -12,15 +12,18 @@
 /* Styles pour chaque section d'informations du profil */
 .user-profile div {
   padding: 15px;
+<<<<<<< HEAD
   // border-radius: 10px;
   // background-color: #f9f9f9;
+=======
+>>>>>>> 0f0ca90585a04f2c85fdf5947710e3cb37186a28
 }
 
 .user-profile div:last-child {
   margin-bottom: 0;
 }
 
-/* Styles pour les étiquettes d'informations */
+/* Styles pour les Ã©tiquettes d'informations */
 .user-profile .title {
   color: #2980b9;
   font-weight: bold;
@@ -32,15 +35,26 @@
 }
 
 /* Styles pour le lien "Changer mon mot de passe" */
-.user-profile a {
-  text-decoration: none;
-  color: #2980b9;
-  font-weight: bold;
-  transition: color 0.3s ease-in-out;
-  float: right;
+.button-row {
+  display: flex;
+  justify-content: flex-end;
 
+  .button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: -10px -5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #4CAF50;
+    background-color: #4CAF50;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
 
-  &:hover {
-    color: #1abc9c;
+    &:hover {
+      background-color: #45a049;
+    }
   }
 }

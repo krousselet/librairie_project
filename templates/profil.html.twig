@@ -11,14 +11,19 @@
     {% block header %}
         {{ parent() }}
     {% endblock header %}
+
     <div class="user-profile">
-    <div class="title">User name: <div class="userinfo">{{ app.user.username }}</div></div>
-    <div class="title">First name: <div class="userinfo">{{ app.user.firstname }}</div></div>
-    <div class="title">Last name: <div class="userinfo">{{ app.user.lastname }}</div></div>
-    <div class="title">Email: <div class="userinfo">{{ app.user.email }}</div></div>
-    <div class="title">Address: <div class="userinfo">{{ app.user.address }}</div></div>
+        <div class="title">User name: <div class="userinfo">{{ app.user.username }}</div></div>
+        <div class="title">First name: <div class="userinfo">{{ app.user.firstname }}</div></div>
+        <div class="title">Last name: <div class="userinfo">{{ app.user.lastname }}</div></div>
+        <div class="title">Email: <div class="userinfo">{{ app.user.email }}</div></div>
+        <div class="title">Address: <div class="userinfo">{{ app.user.address }}</div></div>
 
-    <a href="#">Changer mon mot de passe</a>
+        <div class="button-row">
+            <a href="{{ path('app_forgot_password_request') }}" class="button">Changer mon mot de passe</a>
+        </div>
+        <div class="button-row">
+            <a href="{{ path('app_user_index') }}" class="button">Modifier mes informations</a>
+        </div>
     </div>
-
 {% endblock body %}
