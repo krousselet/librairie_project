@@ -12,11 +12,6 @@
 /* Styles pour chaque section d'informations du profil */
 .user-profile div {
   padding: 15px;
-<<<<<<< HEAD
-  // border-radius: 10px;
-  // background-color: #f9f9f9;
-=======
->>>>>>> 0f0ca90585a04f2c85fdf5947710e3cb37186a28
 }
 
 .user-profile div:last-child {
@@ -39,22 +34,37 @@
   display: flex;
   justify-content: flex-end;
 
-  .button {
-    display: inline-block;
-    padding: 10px 15px;
-    margin: -10px -5px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid #4CAF50;
-    background-color: #4CAF50;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
+  .btn-perso{
+    padding: 5px;
+    background-color: #ff8800;
+    border-radius: 7px;
+    color: white;
+    transition: 0.2s ease;
 
-    &:hover {
-      background-color: #45a049;
+    &:hover{
+      scale: 1.1;
+      transition: 0.2s ease;
+    }
+    &:active{
+      scale: 0.9;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.521);
+      transition: 0.2s ease;
     }
   }
-}
+  .btn-perso2{
+    padding: 5px;
+    background-color: #ff8800;
+    border-radius: 7px;
+    color: white;
+    margin-left: 20px; 
+    &:hover{
+      scale: 1.1;
+      transition: 0.2s ease;
+    }
+    &:active{
+      scale: 0.9;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.521);
+      transition: 0.2s ease;
+    }
+  }
+ }

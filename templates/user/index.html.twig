@@ -1,4 +1,8 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('style/profil.css') }}">
+{% endblock %}
 
 {% block title %}User index{% endblock %}
 
@@ -8,19 +12,18 @@
 {% endblock %}
     
 
-    <div id="container">
+    <div class="user-profile">
     <h1>Vos informations {{app.user.username}}</h1>
     <br>
         <ul>
-            <div id="row-edit"><li>Id :</li><span>{{ user.id }}</span></div>
-            <div id="row-edit"><li>Username :</li><span>{{ user.username }}</span></div>
-            <div id="row-edit"><li>Email :</li><span>{{ user.email }}</span></div>
-            <div id="row-edit"><li>FirstName :</li><span>{{ user.firstName }}</span></div>
-            <div id="row-edit"><li>LastName :</li><span>{{ user.lastName }}</span></div>
-            <div id="row-edit"><li>Address :</li><span>{{ user.address }}</span></div>
-            <div id="row-button">
-                <a class="btn-perso"href="{{ path('app_user_show', {'id': user.id}) }}">show</a>
-                <a class="btn-perso" href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
+            <div class="title">Username :<div class="userinfo">{{ app.user.username }}</div></div>
+            <div class="title">Email :<div class="userinfo">{{ app.user.email }}</div></div>
+            <div class="title">FirstName :<div class="userinfo">{{ app.user.firstName }}</div ></div>
+            <div class="title">LastName :<div class="userinfo">{{ app.user.lastName }}</div></div>
+            <div class="title">Address :<div class="userinfo">{{ app.user.address }}</div></div>
+            <div class="button-row">
+                <a class="btn-perso"href="{{ path('app_user_show', {'id': app.user.id}) }}">show</a>
+                <a class="btn-perso2" href="{{ path('app_user_edit', {'id': app.user.id}) }}">edit</a>
             </div>
         </ul>
     </div>

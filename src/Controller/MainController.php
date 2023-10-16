@@ -15,26 +15,4 @@ class MainController extends AbstractController
     {
         return $this->render('base.html.twig');
     }
-
-    #[Route('/profil', name: 'profil_user')]
-    public function profil(): Response
-    {
-        return $this->render('profil.html.twig');
-    }
-    #[Route('/location', name: 'app_location')]
-    public function location(LivresRepository $livreRepository): Response
-    {
-        return $this->render('location/location.html.twig', [
-            'livres' => $livreRepository->findAll(),
-        ]);
-    }
-    #[Route('/commande', name: 'app_commande')]
-    public function commande(): Response
-    {
-        $exemplaire = new Exemplaires();
-        $form = $this->createForm(CommandeFormType::class, $exemplaire);
-        return $this->render('location/commande.html.twig', [
-            'commandeForm' => $form->createView()
-        ]);
-    }
 }
