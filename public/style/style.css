@@ -168,8 +168,6 @@ ul {
 /* Styles pour chaque section d'informations du profil */
 .user-profile div {
   padding: 15px;
-  border-radius: 10px;
-  background-color: #f9f9f9;
 }
 
 .user-profile div:last-child {
