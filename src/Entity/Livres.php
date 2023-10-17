@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\LivresRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\Exemplaires;
@@ -27,6 +29,9 @@ class Livres
     #[ORM\Column(length: 13)]
     private ?string $isbn = null;
 
+    #[ORM\Column]
+    private ?int $quantite = null;
+
     #[ORM\OneToOne(mappedBy: 'id_livre', cascade: ['persist', 'remove'])]
     private ?Exemplaires $exemplaires = null;
 
@@ -38,6 +43,14 @@ class Livres
 
     #[ORM\OneToOne(mappedBy: 'id_livre', cascade: ['persist', 'remove'])]
     private ?Categories $categories = null;
+
+    #[ORM\OneToMany(mappedBy: 'livre', targetEntity: Emprunt::class)]
+    private Collection $emprunts;
+
+    public function __construct()
+    {
+        $this->emprunts = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -88,6 +101,18 @@ class Livres
     public function setIsbn(string $isbn): static
     {
         $this->isbn = $isbn;
+
+        return $this;
+    }
+
+    public function getQuantite(): ?int
+    {
+        return $this->quantite;
+    }
+
+    public function setQuantite(int $quantite): static
+    {
+        $this->quantite = $quantite;
 
         return $this;
     }
@@ -156,6 +181,36 @@ class Livres
         }
 
         $this->categories = $categories;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Emprunt>
+     */
+    public function getEmprunts(): Collection
+    {
+        return $this->emprunts;
+    }
+
+    public function addEmprunt(Emprunt $emprunt): static
+    {
+        if (!$this->emprunts->contains($emprunt)) {
+            $this->emprunts->add($emprunt);
+            $emprunt->setLivre($this);
+        }
+
+        return $this;
+    }
+
+    public function removeEmprunt(Emprunt $emprunt): static
+    {
+        if ($this->emprunts->removeElement($emprunt)) {
+            // set the owning side to null (unless already changed)
+            if ($emprunt->getLivre() === $this) {
+                $emprunt->setLivre(null);
+            }
+        }
 
         return $this;
     }

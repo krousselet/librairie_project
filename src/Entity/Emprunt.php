@@ -26,9 +26,22 @@ class Emprunt
     #[ORM\OneToOne(mappedBy: 'id_emprunt', cascade: ['persist', 'remove'])]
     private ?Rendus $rendus = null;
 
+    // #[ORM\ManyToOne(inversedBy: 'emprunts')]
+    // private ?Exemplaires $quantite = null;
+
+    #[ORM\ManyToOne(inversedBy: 'emprunts')]
+    private ?Livres $livre = null;
+
+
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function setId($id): ?int
+    {
+        return $this->id = $id;
     }
 
     public function getIdExemplaire(): ?Exemplaires
@@ -85,6 +98,30 @@ class Emprunt
         }
 
         $this->rendus = $rendus;
+
+        return $this;
+    }
+
+    // public function getQuantite(): ?Exemplaires
+    // {
+    //     return $this->quantite;
+    // }
+
+    // public function setQuantite(?Exemplaires $quantite): static
+    // {
+    //     $this->quantite = $quantite;
+
+    //     return $this;
+    // }
+
+    public function getLivre(): ?Livres
+    {
+        return $this->livre;
+    }
+
+    public function setLivre(?Livres $livre): static
+    {
+        $this->livre = $livre;
 
         return $this;
     }

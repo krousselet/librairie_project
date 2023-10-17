@@ -13,8 +13,12 @@ class LocationController extends AbstractController
     #[Route('/location', name: 'app_location')]
     public function displayLocationAvailability(LivresRepository $livreRepository, ExemplairesRepository $exemplairesRepository): Response
     {
+
+        $livres = $livreRepository->findAll();
+
+        // dd($livres, $buttonFirst);
         return $this->render('location/location.html.twig', [
-            'livres' => $livreRepository->findAll(),
+            'livres' => $livres,
             'exemplaires' => $exemplairesRepository->findAll(),
         ]);
     }

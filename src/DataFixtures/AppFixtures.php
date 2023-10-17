@@ -46,7 +46,7 @@ class AppFixtures extends Fixture
             $manager->persist($auteurs[$i]);
             // nouvelle boucle pour créer des livres
             $livre = new Livres();
-            $livre->setTitre($faker->title(8));
+            $livre->setTitre($faker->sentence(1));
             $livre->setAuteur($auteurs[$i]->getNomEntie());
             $livre->setIsbn($faker->isbn13());
 
