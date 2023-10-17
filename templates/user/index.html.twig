@@ -13,7 +13,7 @@
     
 
     <div class="user-profile">
-    <h1>Vos informations {{app.user.username}}</h1>
+    <h1>Vos informations :</h1>
     <br>
         <ul>
             <div class="title">Username :<div class="userinfo">{{ app.user.username }}</div></div>
@@ -22,10 +22,8 @@
             <div class="title">LastName :<div class="userinfo">{{ app.user.lastName }}</div></div>
             <div class="title">Address :<div class="userinfo">{{ app.user.address }}</div></div>
             <div class="button-row">
-                <a class="btn-perso"href="{{ path('app_user_show', {'id': app.user.id}) }}">show</a>
                 <a class="btn-perso2" href="{{ path('app_user_edit', {'id': app.user.id}) }}">edit</a>
             </div>
         </ul>
     </div>
-    {# <a href="{{ path('app_user_new') }}">Create new</a> #}
 {% endblock %}
