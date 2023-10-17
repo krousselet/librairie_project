@@ -147,7 +147,8 @@ td {
   align-items: center;
   background: linear-gradient(to right, #f7f7f7, #ffffff);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  backdrop-filter: 10px;
+  -webkit-backdrop-filter: 10px;
+          backdrop-filter: 10px;
   outline: 1px white;
   margin-top: calc((50vh - 70px) / 2);
 }
@@ -317,6 +318,4 @@ td {
   background-color: #ff8800;
   border-radius: 7px;
   color: white;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
