@@ -29,9 +29,6 @@ class Livres
     #[ORM\Column(length: 13)]
     private ?string $isbn = null;
 
-    #[ORM\Column]
-    private ?int $quantite = null;
-
     #[ORM\OneToOne(mappedBy: 'id_livre', cascade: ['persist', 'remove'])]
     private ?Exemplaires $exemplaires = null;
 
@@ -46,6 +43,9 @@ class Livres
 
     #[ORM\OneToMany(mappedBy: 'livre', targetEntity: Emprunt::class)]
     private Collection $emprunts;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $description = null;
 
     public function __construct()
     {
@@ -101,18 +101,6 @@ class Livres
     public function setIsbn(string $isbn): static
     {
         $this->isbn = $isbn;
-
-        return $this;
-    }
-
-    public function getQuantite(): ?int
-    {
-        return $this->quantite;
-    }
-
-    public function setQuantite(int $quantite): static
-    {
-        $this->quantite = $quantite;
 
         return $this;
     }
@@ -211,6 +199,18 @@ class Livres
                 $emprunt->setLivre(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): static
+    {
+        $this->description = $description;
 
         return $this;
     }

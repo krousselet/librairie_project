@@ -49,14 +49,13 @@ class AppFixtures extends Fixture
             $livre->setTitre($faker->sentence(1));
             $livre->setAuteur($auteurs[$i]->getNomEntie());
             $livre->setIsbn($faker->isbn13());
+            $livre->setDescription($faker->sentence(5));
 
             $manager->persist($livre);
 
             $exemplaire = new Exemplaires();
             $exemplaire->setIdUtilisateur($user[$i]);
-            // $exemplaire->setLivres($livre->getTitre($i));
             $exemplaire->setQuantite($faker->numberBetween(0, 100000));
-            $exemplaire->setStatut($exemplaire->getQuantite() > 0);
             $manager->persist($exemplaire);
         }
         $manager->flush();

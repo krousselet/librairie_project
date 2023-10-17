@@ -13,7 +13,8 @@ class CommandeFormType extends AbstractType
     {
         $builder
             // ->add('dateEmprunt')
-            ->add('dateRetour');
+            ->add('dateRetour')
+            ->add('dateEmprunt');
     }
 
     public function configureOptions(OptionsResolver $resolver): void

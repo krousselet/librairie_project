@@ -23,12 +23,18 @@ class CommandeController extends AbstractController
         // Fetch the corresponding livre using $livreId
         $livre = $livreRepository->find($livreId);
         $exemplaire = new Exemplaires();
-        $exemplaire = $exemplairesRepository->find($livreId);
+        $exemplaire->setIdLivre($livre);
+        if (!$exemplaire) {
+            // Handle the error, maybe throw an exception or redirect
+            throw new \Exception("Exemplaire not found!");
+        }
 
         // Create a new Emprunt
         $emprunt = new Emprunt();
 
         $now = new \DateTime();
+        $emprunt->setUser($this->getUser());
+        // $emprunt->setIdExemplaire($exemplaire->getId());
         $emprunt->setDateemprunt($now);
         $emprunt->setDateRetour($now);
 
@@ -40,10 +46,8 @@ class CommandeController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $emprunt->setIdExemplaire($livreRepository->find($livreId));
-            $emprunt->setId($emprunt->getId() + 1);
-            $entityManager->persist($exemplaire);
             $entityManager->persist($emprunt);
+
             $entityManager->flush();
 
             return $this->redirectToRoute('app_location');
