@@ -134,14 +134,14 @@ class Exemplaires
         return $this;
     }
 
-    public function updateExemplairesAvailability($exemplaire)
-    {
-        if ($exemplaire->getQuantite() === 0) {
-            $this->setStatut(false);
-        } else {
-            $this->setStatut(true);
-        }
-    }
+    // public function updateExemplairesAvailability($exemplaire)
+    // {
+    //     if ($exemplaire->getQuantite() === 0) {
+    //         $this->setStatut(false);
+    //     } else {
+    //         $this->setStatut(true);
+    //     }
+    // }
 
     public function getStatut(): bool
     {
