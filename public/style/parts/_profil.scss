@@ -14,6 +14,27 @@
   padding: 15px;
 }
 
+label{
+  margin-right: 10px;
+}
+
+.btn-perso3{
+  padding: 5px;
+  background-color: #ff8800;
+  border-radius: 7px;
+  color: white;
+  margin-left: 20px; 
+  &:hover{
+    scale: 1.1;
+    transition: 0.2s ease;
+  }
+  &:active{
+    scale: 0.9;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.521);
+    transition: 0.2s ease;
+  }
+}
+
 .user-profile div:last-child {
   margin-bottom: 0;
 }
@@ -68,3 +89,5 @@
     }
   }
  }
+
+ 
