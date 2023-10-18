@@ -90,27 +90,27 @@ class Exemplaires
 
 
 
-    // public function getLivres(): ?Livres
-    // {
-    //     return $this->livres;
-    // }
+    public function getLivres(): ?Livres
+    {
+        return $this->livres;
+    }
 
-    // public function setLivres(?Livres $livres): static
-    // {
-    //     // unset the owning side of the relation if necessary
-    //     if ($livres === null && $this->livres !== null) {
-    //         $this->livres->setIdExemplaire(null);
-    //     }
+    public function setLivres(?Livres $livres): static
+    {
+        // unset the owning side of the relation if necessary
+        if ($livres === null && $this->livres !== null) {
+            $this->livres->setIdExemplaire(null);
+        }
 
-    //     // set the owning side of the relation if necessary
-    //     if ($livres !== null && $livres->getIdExemplaire() !== $this) {
-    //         $livres->setIdExemplaire($this);
-    //     }
+        // set the owning side of the relation if necessary
+        if ($livres !== null && $livres->getIdExemplaire() !== $this) {
+            $livres->setIdExemplaire($this);
+        }
 
-    //     $this->livres = $livres;
+        $this->livres = $livres;
 
-    //     return $this;
-    // }
+        return $this;
+    }
 
     public function getEmprunt(): ?Emprunt
     {
