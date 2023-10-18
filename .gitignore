@@ -13,7 +13,6 @@
 ###> phpunit/phpunit ###
 /phpunit.xml
 .phpunit.result.cache
-.idea
 ###< phpunit/phpunit ###
 
 ###> symfony/phpunit-bridge ###
