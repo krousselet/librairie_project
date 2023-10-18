@@ -1,22 +1,25 @@
 <?php
 
-namespace App\MessageHandler;
+    namespace App\MessageHandler;
 
-use App\Message\CommandeLivreMessage;
-use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
+    use App\Message\Commande;
+    use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 
-// class EnvoiEmailRemerciementHandler implements MessageSubscriberInterface
-// {
-//     private $mailer;
 
-//     public function __construct($mailer)
-//     {
-//         $this->mailer = $mailer;
-//     }
+    #[AsMessageHandler()]
 
-//     public function __invoke(CommandeLivreMessage $message)
-//     {
-//         $livre = $message->getLivre();
-//         $emailUtilisateur = $message->getEmailUtilisateur();
-//     }
-// }
+    class EnvoiEmailRemerciement
+    {
+        private $mailer;
+
+        public function __construct($mailer)
+        {
+            $this->mailer = $mailer;
+        }
+
+        public function __invoke(Commande $message)
+        {
+            $livre = $message->getLivre();
+            $emailUtilisateur = $message->getEmailUtilisateur();
+        }
+    }
