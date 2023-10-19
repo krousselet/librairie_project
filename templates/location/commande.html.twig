@@ -25,7 +25,7 @@
                         <td>{{ livre.titre }}</td>
                         <td>{{ livre.auteur }}</td>
                         <td>{{ livre.description }}</td>
-                        <td>{{ now }}</td>
+                        <td>{{ "now"|date("d/m/Y") }}</td>
                         <td>{{ form_row(commandeForm.dateRetour, {
             label: 'Date de retour : '
         }) }}</td>
@@ -34,7 +34,7 @@
         </table>
         
         
-        <a href="{{path('app_location')}}">Valider</a>
+        <a href="{{path('confirm')}}">Valider</a>
         </div>
     {{ form_end(commandeForm) }}
     </div>

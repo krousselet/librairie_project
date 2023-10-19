@@ -68,6 +68,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: Emprunt::class)]
     private Collection $emprunts;
 
+    #[ORM\OneToOne(mappedBy: 'userEmpruntId', cascade: ['persist', 'remove'])]
+    private ?Emprunt $emprunt = null;
+
     public function __construct()
     {
         $this->emprunts = new ArrayCollection();
@@ -200,23 +203,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->exemplaires;
     }
 
-    public function setExemplaires(?Exemplaires $exemplaires): static
-    {
-        // unset the owning side of the relation if necessary
-        if ($exemplaires === null && $this->exemplaires !== null) {
-            $this->exemplaires->setIdUtilisateur(null);
-        }
-
-        // set the owning side of the relation if necessary
-        if ($exemplaires !== null && $exemplaires->getIdUtilisateur() !== $this) {
-            $exemplaires->setIdUtilisateur($this);
-        }
-
-        $this->exemplaires = $exemplaires;
-
-        return $this;
-    }
-
     public function getAvis(): ?Avis
     {
         return $this->avis;
@@ -287,6 +273,28 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $emprunt->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getEmprunt(): ?Emprunt
+    {
+        return $this->emprunt;
+    }
+
+    public function setEmprunt(?Emprunt $emprunt): static
+    {
+        // unset the owning side of the relation if necessary
+        if ($emprunt === null && $this->emprunt !== null) {
+            $this->emprunt->setUserEmpruntId(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($emprunt !== null && $emprunt->getUserEmpruntId() !== $this) {
+            $emprunt->setUserEmpruntId($this);
+        }
+
+        $this->emprunt = $emprunt;
 
         return $this;
     }

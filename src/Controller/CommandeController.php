@@ -4,11 +4,12 @@ namespace App\Controller;
 
 use App\Entity\Emprunt;
 use App\Entity\Exemplaires;
-use App\Entity\Livres;
 use App\Form\CommandeFormType;
 use App\Repository\ExemplairesRepository;
 use App\Repository\LivresRepository;
+use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -18,27 +19,27 @@ class CommandeController extends AbstractController
 {
 
     #[Route('/commande/{livreId}', name: 'app_commande')]
-    public function commandeId(Request $request, EntityManagerInterface $entityManager, ExemplairesRepository $exemplairesRepository, LivresRepository $livreRepository, int $livreId): Response
+    public function commandeId(Security $security, Request $request, ExemplairesRepository $exemplairesRepository, EntityManagerInterface $entityManager, LivresRepository $livreRepository, int $livreId): Response
     {
-        // Fetch the corresponding livre using $livreId
+
         $livre = $livreRepository->find($livreId);
+        $livre->setQuantite($livre->getQuantite() - 1);
+        // dd($quantite);
+
+        // Création d'un nouvel Emprunt (id_exemplaire_id	date_emprunt	date_retour 	livre_id	user_id)
+
+        // $emprunt->setUser($userRepository->find($this));
+        //EXEMPLAIRES
         $exemplaire = new Exemplaires();
-        $exemplaire->setIdLivre($livre);
-        if (!$exemplaire) {
-            // Handle the error, maybe throw an exception or redirect
-            throw new \Exception("Exemplaire not found!");
-        }
+//        $exemplaire->setIdUtilisateur($security->getUser());
+        $entityManager->persist($exemplaire);
+        $entityManager->flush();
 
-        // Create a new Emprunt
-        $emprunt = new Emprunt();
-
-        $now = new \DateTime();
-        $emprunt->setUser($this->getUser());
-        // $emprunt->setIdExemplaire($exemplaire->getId());
-        $emprunt->setDateemprunt($now);
-        $emprunt->setDateRetour($now);
-
-        // You can associate the $livre with the Emprunt, assuming you have a relationship between Emprunt and Livres
+        $now = new DateTime(); // Création de la date actuelle
+        $emprunt = new Emprunt(); // création de l'id ?
+        $userId = $security->getUser();
+        $emprunt->setUser($userId); #id user
+        #$emprunt->setIdExemplaire($exemplaireRepository->find($livreId)); exemplaire choisi
         $emprunt->setLivre($livreRepository->find($livreId));
 
 
@@ -47,14 +48,15 @@ class CommandeController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($emprunt);
-
+            $entityManager->persist($exemplaire);
+            $entityManager->persist($livre);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_location');
+            return $this->redirectToRoute('confirm');
         }
 
         return $this->render('location/commande.html.twig', [
-            'now' => $emprunt->getDateEmprunt()->format('d-m-Y H:i:s'),
+            'now' => $emprunt->getDateEmprunt(),
             'commandeForm' => $form,
             'livre' => $livre,
         ]);
