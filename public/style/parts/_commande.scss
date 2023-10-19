@@ -1,6 +1,6 @@
 body {
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     font-family: Arial, sans-serif;
     margin: 0;
     display: flex;
@@ -77,4 +77,60 @@ table {
 
 #logout {
     background-color: #e74c3c;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.container .leftSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    height: 50%;
+    margin-left: 100px;
+    position: relative;
+    top: 100px;
+    left: 0;
+}
+
+.container .leftSide .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.container .rightSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 50%;
+    margin-right: 100px;
+}
+
+.container .rightSide .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 120px;
+}
+
+.container .rightSide .validate {
+    position: absolute;
+    right: 50px;
+    margin-top: 50px;
 }
