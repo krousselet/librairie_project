@@ -6,7 +6,7 @@ namespace App\MessageHandler;
 use App\Message\Commande;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Messenger\Attribute\AsMessageHandler;
-
+use Symfony\Component\Mailer\Mime\Email;
 
 #[AsMessageHandler()]
 
