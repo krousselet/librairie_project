@@ -28,7 +28,6 @@ class EnvoiEmailRemerciement
             ->from('votre_email@example.com')
             ->to($emailUtilisateur)
             ->subject('Merci pour votre commande de ' . $livre)
-//                ->text('Nous vous remercions pour votre commande du livre ' . $livre . '.')
             ->html('<p> Nous vous remercions pour votre commande du livre $livre</p>');
 
         $this->mailer->send($email);
