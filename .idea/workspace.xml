@@ -170,7 +170,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+<<<<<<< HEAD
+    "git-widget-placeholder": "pre-production",
+=======
     "git-widget-placeholder": "kevin",
+>>>>>>> 709536477c4e28707bb30e301961fa3dae28c33e
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -195,7 +199,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697624246147</updated>
+<<<<<<< HEAD
+      <workItem from="1697624248225" duration="1653000" />
+=======
       <workItem from="1697624248225" duration="2008000" />
+>>>>>>> 709536477c4e28707bb30e301961fa3dae28c33e
     </task>
     <servers />
   </component>
