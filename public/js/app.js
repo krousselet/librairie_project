@@ -5,6 +5,8 @@ const upper = document.querySelector('.upper');
 const middle = document.querySelector('.middle');
 const lower = document.querySelector('.lower');
 const navigationMenu = document.querySelector('.navigation-menu');
+const container = document.querySelector('.container');
+const imageContainer = document.querySelector('.imageContainer');
 
 // HEADER FUNCTIONS
 
@@ -15,6 +17,11 @@ function displayMenu() {
     navigationMenu.classList.toggle('navigation-menu-active')
 }
 
+function flipImage() {
+    imageContainer.classList.toggle('flipped');
+}
+
 // CODE
 
-hamburger.onclick = () => displayMenu();
+// hamburger.onclick = () => displayMenu();
+imageContainer.onclick = () => flipImage();

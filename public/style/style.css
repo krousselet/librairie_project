@@ -1,5 +1,7 @@
-@charset "UTF-8";
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,9 +175,8 @@ td {
   padding: 5px;
 }
 
-/* Styles pour le conteneur du profil utilisateur */
 .user-profile {
-  margin: 20px auto;
+  margin: 110px auto;
   padding: 30px;
   border: 1px solid #ccc;
   max-width: 400px;
@@ -184,7 +185,6 @@ td {
   border-radius: 15px;
 }
 
-/* Styles pour chaque section d'informations du profil */
 .user-profile div {
   padding: 15px;
 }
@@ -201,11 +201,11 @@ label {
   margin-left: 20px;
 }
 .btn-perso3:hover {
-  scale: 1.1;
+  transform: scale(1.1);
   transition: 0.2s ease;
 }
 .btn-perso3:active {
-  scale: 0.9;
+  transform: scale(0.9);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.521);
   transition: 0.2s ease;
 }
@@ -214,18 +214,15 @@ label {
   margin-bottom: 0;
 }
 
-/* Styles pour les Ã©tiquettes d'informations */
 .user-profile .title {
   color: #2980b9;
   font-weight: bold;
 }
 
-/* Styles pour les valeurs d'informations */
 .user-profile .userinfo {
   color: #555;
 }
 
-/* Styles pour le lien "Changer mon mot de passe" */
 .button-row {
   display: flex;
   justify-content: flex-end;
@@ -238,11 +235,11 @@ label {
   transition: 0.2s ease;
 }
 .button-row .btn-perso:hover {
-  scale: 1.1;
+  transform: scale(1.1);
   transition: 0.2s ease;
 }
 .button-row .btn-perso:active {
-  scale: 0.9;
+  transform: scale(0.9);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.521);
   transition: 0.2s ease;
 }
@@ -254,11 +251,11 @@ label {
   margin-left: 20px;
 }
 .button-row .btn-perso2:hover {
-  scale: 1.1;
+  transform: scale(1.1);
   transition: 0.2s ease;
 }
 .button-row .btn-perso2:active {
-  scale: 0.9;
+  transform: scale(0.9);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.521);
   transition: 0.2s ease;
 }
@@ -329,32 +326,29 @@ label {
   cursor: pointer;
 }
 
-body {
-  min-width: 100vw;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Espace entre les boutons Location, Profile et Déconnexion */
 a {
   margin-right: 20px;
-  /* Augmentez l'espace entre les liens */
   text-decoration: none;
   color: #555;
   font-weight: bold;
 }
-
+a:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease;
+}
+a:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.521);
+  transition: 0.2s ease;
+}
 a:last-child {
   margin-right: 0;
-  /* Aucune marge à droite pour le dernier lien */
+  padding: 5px;
+  background-color: #ff8800;
+  border-radius: 7px;
+  color: white;
 }
 
-/* Style pour le formulaire et le tableau */
 #container {
   padding: 20px;
   background-color: #fff;
@@ -362,24 +356,6 @@ a:last-child {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-
-th,
-td {
-  padding: 15px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
-
-th {
-  background-color: #f0f0f0;
-}
-
-/* Style pour les boutons Location, Profile et Déconnexion */
 #profile,
 #logout {
   padding: 15px 30px;
@@ -387,6 +363,10 @@ th {
   color: #fff;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+}
+#profile:hover,
+#logout:hover {
+  background-color: #555;
 }
 
 #profile {
@@ -397,9 +377,77 @@ th {
   background-color: #e74c3c;
 }
 
-#profile:hover,
-#logout:hover {
-  background-color: #555;
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+.container .leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  height: 50%;
+  margin-left: 100px;
+  position: relative;
+  top: 100px;
+  left: 0;
+}
+.container .leftSide .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.container .rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50%;
+  height: 100%;
+  margin: 100px auto 0 auto;
+}
+.container .rightSide .imageContainer {
+  margin: 0 auto;
+  position: relative;
+  perspective: 1000px;
+  width: 150px;
+  height: 250px;
+  top: -350px;
+}
+.container .rightSide .imageContainer .faceContainer, .container .rightSide .imageContainer .backContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+.container .rightSide .imageContainer .backContainer {
+  transform: rotateY(180deg);
+}
+.container .rightSide .imageContainer.flipped .faceContainer {
+  transform: rotateY(180deg);
+}
+.container .rightSide .imageContainer.flipped .backContainer {
+  transform: rotateY(0);
+}
+.container .rightSide .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 120px;
+}
+.container .rightSide .validate {
+  position: absolute;
+  right: 50px;
+  margin-top: 50px;
 }
 
 #container {

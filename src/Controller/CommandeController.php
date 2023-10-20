@@ -31,7 +31,6 @@ class CommandeController extends AbstractController
         // $emprunt->setUser($userRepository->find($this));
         //EXEMPLAIRES
         $exemplaire = new Exemplaires();
-//        $exemplaire->setIdUtilisateur($security->getUser());
         $entityManager->persist($exemplaire);
         $entityManager->flush();
 
@@ -39,8 +38,8 @@ class CommandeController extends AbstractController
         $emprunt = new Emprunt(); // création de l'id ?
         $userId = $security->getUser();
         $emprunt->setUser($userId); #id user
-        #$emprunt->setIdExemplaire($exemplaireRepository->find($livreId)); exemplaire choisi
         $emprunt->setLivre($livreRepository->find($livreId));
+//        $emprunt->setDateRetour();
 
 
         $form = $this->createForm(CommandeFormType::class, $emprunt);
@@ -51,6 +50,7 @@ class CommandeController extends AbstractController
             $entityManager->persist($exemplaire);
             $entityManager->persist($livre);
             $entityManager->flush();
+
 
             return $this->redirectToRoute('confirm');
         }
