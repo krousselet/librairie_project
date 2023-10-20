@@ -31,9 +31,7 @@
             <div class="row">
                 <label for="">Date de retour :</label>
 {#                <label for="">Date de retour :</label>#}
-                {{ form_row(commandeForm.dateRetour, {
-                    'attr': {'label': 'hidden', 'hidden': 'hidden'}
-                }) }}
+                {{ form_row(commandeForm.dateRetour) }}
             </div>
             <div class="row">
                 <a href="{{ path('app_location') }}" class="validate">Valider</a>
