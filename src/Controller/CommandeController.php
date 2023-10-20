@@ -21,7 +21,9 @@ class CommandeController extends AbstractController
     #[Route('/commande/{livreId}', name: 'app_commande')]
     public function commandeId(Security $security, Request $request, ExemplairesRepository $exemplairesRepository, EntityManagerInterface $entityManager, LivresRepository $livreRepository, int $livreId): Response
     {
-
+        $now = new DateTime();
+        $oneWeekLater = (clone $now)->modify('+1 week');
+        $oneMonthLater = (clone $now)->modify('+1 month');
         $livre = $livreRepository->find($livreId);
         $livre->setQuantite($livre->getQuantite() - 1);
         // dd($quantite);
