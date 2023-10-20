@@ -56,7 +56,6 @@ class CommandeController extends AbstractController
             $entityManager->flush();
 
 
-
             //Bryan
             $emprunt = new Emprunt();
             $throw = false;
