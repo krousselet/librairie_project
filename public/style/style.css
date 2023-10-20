@@ -2,14 +2,12 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 70px;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 header nav {
   width: 100vw;
@@ -40,7 +38,7 @@ header nav .navigation-menu-active {
   justify-content: space-around;
   align-items: center;
 }
-header nav #hamburger {
+header nav .hamburger {
   margin-right: 15px;
   display: flex;
   justify-content: center;
@@ -49,9 +47,9 @@ header nav #hamburger {
   width: 35px;
   height: 50px;
 }
-header nav #hamburger .upper,
-header nav #hamburger .middle,
-header nav #hamburger .lower {
+header nav .hamburger .upper,
+header nav .hamburger .middle,
+header nav .hamburger .lower {
   position: absolute;
   top: 25%;
   transition: 0.3s ease;
@@ -59,27 +57,27 @@ header nav #hamburger .lower {
   width: 25px;
   height: 2px;
 }
-header nav #hamburger .middle {
+header nav .hamburger .middle {
   top: 50%;
 }
-header nav #hamburger .lower {
+header nav .hamburger .lower {
   top: 75%;
 }
-header nav #hamburger .upper-active,
-header nav #hamburger .middle-active,
-header nav #hamburger .lower-active {
+header nav .hamburger .upper-active,
+header nav .hamburger .middle-active,
+header nav .hamburger .lower-active {
   transition: 0.3s ease;
 }
-header nav #hamburger .upper-active {
+header nav .hamburger .upper-active {
   top: 50%;
   transform: rotate(-135deg);
 }
-header nav #hamburger .middle-active {
+header nav .hamburger .middle-active {
   opacity: 0;
   width: 0;
   transform: rotate(360deg);
 }
-header nav #hamburger .lower-active {
+header nav .hamburger .lower-active {
   top: 50%;
   transform: rotate(135deg);
 }
@@ -326,17 +324,6 @@ label {
   cursor: pointer;
 }
 
-body {
-  min-width: 100vw;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 a {
   margin-right: 20px;
   text-decoration: none;
@@ -367,20 +354,6 @@ a:last-child {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-table th,
-table td {
-  padding: 15px;
-  text-align: left;
-}
-table th {
-  background-color: #f0f0f0;
-}
-
 #profile,
 #logout {
   padding: 15px 30px;
@@ -400,6 +373,79 @@ table th {
 
 #logout {
   background-color: #e74c3c;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+.container .leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  height: 50%;
+  margin-left: 100px;
+  position: relative;
+  top: 100px;
+  left: 0;
+}
+.container .leftSide .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.container .rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 50%;
+  height: 100%;
+  margin: 100px auto 0 auto;
+}
+.container .rightSide .imageContainer {
+  margin: 0 auto;
+  position: relative;
+  perspective: 1000px;
+  width: 150px;
+  height: 250px;
+  top: -300px;
+}
+.container .rightSide .imageContainer .faceContainer, .container .rightSide .imageContainer .backContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+.container .rightSide .imageContainer .backContainer {
+  transform: rotateY(180deg);
+}
+.container .rightSide .imageContainer.flipped .faceContainer {
+  transform: rotateY(180deg);
+}
+.container .rightSide .imageContainer.flipped .backContainer {
+  transform: rotateY(0);
+}
+.container .rightSide .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 120px;
+}
+.container .rightSide .validate {
+  position: absolute;
+  right: 50px;
+  margin-top: 50px;
 }
 
 #container {

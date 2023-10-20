@@ -2,40 +2,45 @@
 
 {% block title %}Commande{% endblock %}
 
+
 {% block body %}
-{% block header %}
-{{ parent() }}
-{% endblock %}
-    {{ form_errors(commandeForm) }}
-    <div id="container">
-    {{ form_start(commandeForm) }}
-        
-        <table>
-            <thead>
-                    <tr>
-                        <th>Titre du Livre</th>
-                        <th>Auteur</th>
-                        <th>Description</th>
-                        <th>Date d'emprunt</th>
-                        <th>Date de retour</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{{ livre.titre }}</td>
-                        <td>{{ livre.auteur }}</td>
-                        <td>{{ livre.description }}</td>
-                        <td>{{ "now"|date("d/m/Y") }}</td>
-                        <td>{{ form_row(commandeForm.dateRetour, {
-            label: 'Date de retour : '
-        }) }}</td>
-                    </tr>
-                </tbody>
-        </table>
-        
-        
-        <a href="{{path('confirm')}}">Valider</a>
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+
+    <div class="container">
+        <div class="leftSide">
+            <div class="row">
+                <label for="">Titre du livre : {{ livre.titre }}</label>
+            </div>
+            <div class="row">
+                <label for="">Auteur : {{ livre.auteur }}</label>
+
+            </div>
+            <div class="row">
+                <label for="">Description : {{ livre.description }}</label>
+            </div>
         </div>
-    {{ form_end(commandeForm) }}
+        <div class="rightSide">
+            <div class="imageContainer">
+                <div class="faceContainer">
+                    <img class="face" src="{{ asset('assets/pictures/Systemium_face-removebg.png') }}" alt="Front of the book">
+                </div>
+                <div class="backContainer">
+                    <img class="back" src="{{ asset('assets/pictures/Systemium_dos-removebg.png') }}" alt="Back of the book">
+                </div>
+            </div>
+            <div class="row">
+                <label for="">Date d'emprunt : {{ "now"|date("d/m/Y")  }}</label>
+            </div>
+            <div class="row">
+                <label for="">Date de retour :</label>
+{#                <label for="">Date de retour :</label>#}
+                {{ form_row(commandeForm.dateRetour) }}
+            </div>
+            <div class="row">
+                <a href="{{ path('app_location') }}" class="validate">Valider</a>
+            </div>
+        </div>
     </div>
 {% endblock %}

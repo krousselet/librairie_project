@@ -2,14 +2,12 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 70px;
-    position: absolute;
-    top: 0;
-    left: 0;
 
     nav {
         width: 100vw;
@@ -44,7 +42,7 @@ header {
             align-items: center;
         }
 
-        #hamburger {
+        .hamburger {
             margin-right: 15px;
             display: flex;
             justify-content: center;
