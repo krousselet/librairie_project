@@ -22,32 +22,30 @@ class CommandeController extends AbstractController
     public function commandeId(Security $security, Request $request, ExemplairesRepository $exemplairesRepository, EntityManagerInterface $entityManager, LivresRepository $livreRepository, int $livreId): Response
     {
         $now = new DateTime();
-        $oneWeekLater = (clone $now)->modify('+1 week');
-        $oneMonthLater = (clone $now)->modify('+1 month');
+
         $livre = $livreRepository->find($livreId);
         $livre->setQuantite($livre->getQuantite() - 1);
-        // dd($quantite);
-
-        // Création d'un nouvel Emprunt (id_exemplaire_id	date_emprunt	date_retour 	livre_id	user_id)
 
         // $emprunt->setUser($userRepository->find($this));
         //EXEMPLAIRES
         $exemplaire = new Exemplaires();
         $entityManager->persist($exemplaire);
-        $entityManager->flush();
 
         $now = new DateTime(); // Création de la date actuelle
-        $emprunt = new Emprunt(); // création de l'id ?
-        $userId = $security->getUser();
-        $emprunt->setUser($userId); #id user
-        $emprunt->setLivre($livreRepository->find($livreId));
+        $oneWeekLater = (clone $now)->modify('+1 week');
+        $oneMonthLater = (clone $now)->modify('+1 month');
+
 //        $emprunt->setDateRetour();
 
-
+        $emprunt = new Emprunt(); // création de l'id ?
         $form = $this->createForm(CommandeFormType::class, $emprunt);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $userId = $security->getUser();
+            $emprunt->setUser($userId); #id user
+            $emprunt->setLivre($livreRepository->find($livreId));
             $entityManager->persist($emprunt);
             $entityManager->persist($exemplaire);
             $entityManager->persist($livre);
