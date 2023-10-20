@@ -2,14 +2,12 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 70px;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 header nav {
   width: 100vw;
@@ -40,7 +38,7 @@ header nav .navigation-menu-active {
   justify-content: space-around;
   align-items: center;
 }
-header nav #hamburger {
+header nav .hamburger {
   margin-right: 15px;
   display: flex;
   justify-content: center;
@@ -49,9 +47,9 @@ header nav #hamburger {
   width: 35px;
   height: 50px;
 }
-header nav #hamburger .upper,
-header nav #hamburger .middle,
-header nav #hamburger .lower {
+header nav .hamburger .upper,
+header nav .hamburger .middle,
+header nav .hamburger .lower {
   position: absolute;
   top: 25%;
   transition: 0.3s ease;
@@ -59,27 +57,27 @@ header nav #hamburger .lower {
   width: 25px;
   height: 2px;
 }
-header nav #hamburger .middle {
+header nav .hamburger .middle {
   top: 50%;
 }
-header nav #hamburger .lower {
+header nav .hamburger .lower {
   top: 75%;
 }
-header nav #hamburger .upper-active,
-header nav #hamburger .middle-active,
-header nav #hamburger .lower-active {
+header nav .hamburger .upper-active,
+header nav .hamburger .middle-active,
+header nav .hamburger .lower-active {
   transition: 0.3s ease;
 }
-header nav #hamburger .upper-active {
+header nav .hamburger .upper-active {
   top: 50%;
   transform: rotate(-135deg);
 }
-header nav #hamburger .middle-active {
+header nav .hamburger .middle-active {
   opacity: 0;
   width: 0;
   transform: rotate(360deg);
 }
-header nav #hamburger .lower-active {
+header nav .hamburger .lower-active {
   top: 50%;
   transform: rotate(135deg);
 }
@@ -418,7 +416,7 @@ a:last-child {
   perspective: 1000px;
   width: 150px;
   height: 250px;
-  top: -350px;
+  top: -300px;
 }
 .container .rightSide .imageContainer .faceContainer, .container .rightSide .imageContainer .backContainer {
   width: 100%;
