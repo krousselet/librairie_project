@@ -333,23 +333,22 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-a {
+body a {
   margin-right: 20px;
   text-decoration: none;
   color: #555;
   font-weight: bold;
 }
-a:hover {
+body a:hover {
   transform: scale(1.1);
   transition: 0.2s ease;
 }
-a:active {
+body a:active {
   transform: scale(0.9);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.521);
   transition: 0.2s ease;
 }
-a:last-child {
+body a:last-child {
   margin-right: 0;
   padding: 5px;
   background-color: #ff8800;
@@ -406,12 +405,11 @@ body {
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space between;
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
 }
-
 .container .leftSide {
   display: flex;
   flex-direction: column;
@@ -424,7 +422,6 @@ body {
   top: 100px;
   left: 0;
 }
-
 .container .leftSide .row {
   display: flex;
   flex-direction: row;
@@ -432,7 +429,6 @@ body {
   align-items: center;
   margin-bottom: 10px;
 }
-
 .container .rightSide {
   display: flex;
   flex-direction: column;
@@ -441,14 +437,12 @@ body {
   width: 50%;
   margin-right: 100px;
 }
-
 .container .rightSide .row {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 120px;
 }
-
 .container .rightSide .validate {
   position: absolute;
   right: 50px;
