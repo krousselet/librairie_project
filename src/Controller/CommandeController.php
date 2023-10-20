@@ -14,6 +14,9 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mailer\MailerInterface;
+
 
 class CommandeController extends AbstractController
 {
@@ -24,12 +27,7 @@ class CommandeController extends AbstractController
 
         $livre = $livreRepository->find($livreId);
         $livre->setQuantite($livre->getQuantite() - 1);
-        // dd($quantite);
 
-        // Création d'un nouvel Emprunt (id_exemplaire_id	date_emprunt	date_retour 	livre_id	user_id)
-
-        // $emprunt->setUser($userRepository->find($this));
-        //EXEMPLAIRES
         $exemplaire = new Exemplaires();
 //        $exemplaire->setIdUtilisateur($security->getUser());
         $entityManager->persist($exemplaire);
@@ -45,12 +43,33 @@ class CommandeController extends AbstractController
 
         $form = $this->createForm(CommandeFormType::class, $emprunt);
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
+            $throw =true;
             $entityManager->persist($emprunt);
             $entityManager->persist($exemplaire);
             $entityManager->persist($livre);
             $entityManager->flush();
+
+
+            //Bryan
+            $emprunt = new Emprunt();
+            $throw = false;
+            $mailer = $this->get('mailer');
+            $livre = $emprunt->getLivre();
+            $emailUtilisateur = $emprunt->getEmail();
+
+            $email = (new Email())
+
+                ->from('Donnemonargent@signelecheque.com')
+                ->to($emailUtilisateur)
+                ->subject('Merci pour votre commande de ' . $livre)
+                ->text('testest');
+
+            if (!$throw){
+            $mailer->send($email);
+            }
+            //Bryan
+
 
             return $this->redirectToRoute('confirm');
         }
