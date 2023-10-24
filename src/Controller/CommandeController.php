@@ -2,17 +2,16 @@
 
 namespace App\Controller;
 
-use App\Entity\Emprunt;
-use App\Entity\Exemplaires;
-use App\Entity\Livres;
+use App\Domain\Emprunt\Emprunt;
+use App\Domain\Exemplaires\Exemplaires;
+use App\Domain\Exemplaires\Repository\ExemplairesRepository;
+use App\Domain\Livres\Repository\LivresRepository;
 use App\Form\CommandeFormType;
-use App\Repository\ExemplairesRepository;
-use App\Repository\LivresRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\SecurityBundle\Security;
 
 class CommandeController extends AbstractController
 {

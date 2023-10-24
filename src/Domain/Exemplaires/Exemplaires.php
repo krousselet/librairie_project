@@ -1,8 +1,11 @@
 <?php
 
-namespace App\Entity;
+namespace App\Domain\Exemplaires;
 
-use App\Repository\ExemplairesRepository;
+use App\Domain\Auth\User;
+use App\Domain\Emprunt\Emprunt;
+use App\Domain\Exemplaires\Repository\ExemplairesRepository;
+use App\Domain\Livres\Livres;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
