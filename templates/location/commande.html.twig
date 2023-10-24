@@ -1,30 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
-    Commande
-{% endblock %}
+{% block title %}Commande{% endblock %}
+
 
 {% block body %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
+
     <div class="container">
         <div class="leftSide">
             <div class="row">
-                <label for="">Titre du livre</label>
+                <label for="">Titre du livre :</label>
+                <input type="text">
             </div>
             <div class="row">
-                <label for="">Auteur</label>
+                <label for="">Auteur :</label>
+                <input type="text">
             </div>
             <div class="row">
-                <label for="">Description</label>
+                <label for="">Description :</label>
+                <input type="text">
             </div>
         </div>
         <div class="rightSide">
             <div class="imageContainer">
-                <img src="{{ asset('assets/pictures/Systemium_face-removebg.png') }}" alt="Image d'un livre">
+                <div class="faceContainer">
+                    <img class="face" src="{{ asset('assets/pictures/Systemium_face-removebg.png') }}" alt="Front of the book">
+                </div>
+                <div class="backContainer">
+                    <img class="back" src="{{ asset('assets/pictures/Systemium_dos-removebg.png') }}" alt="Back of the book">
+                </div>
             </div>
             <div class="row">
-                <label for="">Date d'emprunt</label>
+                <label for="">Date d'emprunt :</label>
+                <input type="text">
             </div>
             <div class="row">
+                <label for="">Date de retour :</label>
                 {{ form_row(commandeForm.dateRetour, {
                     label: 'Date de retour : '
                 }) }}

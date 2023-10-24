@@ -32,6 +32,13 @@ class Emprunt
     #[ORM\ManyToOne(inversedBy: 'emprunts')]
     private ?Livres $livre = null;
 
+    #[ORM\ManyToOne(inversedBy: 'emprunts')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $user = null;
+
+    #[ORM\OneToOne(inversedBy: 'emprunt', cascade: ['persist', 'remove'])]
+    private ?User $userEmpruntId = null;
+
 
 
     public function getId(): ?int
@@ -85,22 +92,22 @@ class Emprunt
         return $this->rendus;
     }
 
-    public function setRendus(?Rendus $rendus): static
-    {
-        // unset the owning side of the relation if necessary
-        if ($rendus === null && $this->rendus !== null) {
-            $this->rendus->setIdEmprunt(null);
-        }
+    // public function setRendus(?Rendus $rendus): static
+    // {
+    //     // unset the owning side of the relation if necessary
+    //     if ($rendus === null && $this->rendus !== null) {
+    //         $this->rendus->setIdEmprunt(null);
+    //     }
 
-        // set the owning side of the relation if necessary
-        if ($rendus !== null && $rendus->getIdEmprunt() !== $this) {
-            $rendus->setIdEmprunt($this);
-        }
+    //     // set the owning side of the relation if necessary
+    //     if ($rendus !== null && $rendus->getIdEmprunt() !== $this) {
+    //         $rendus->setIdEmprunt($this);
+    //     }
 
-        $this->rendus = $rendus;
+    //     $this->rendus = $rendus;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     // public function getQuantite(): ?Exemplaires
     // {
@@ -122,6 +129,30 @@ class Emprunt
     public function setLivre(?Livres $livre): static
     {
         $this->livre = $livre;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    public function getUserEmpruntId(): ?User
+    {
+        return $this->userEmpruntId;
+    }
+
+    public function setUserEmpruntId(?User $userEmpruntId): static
+    {
+        $this->userEmpruntId = $userEmpruntId;
 
         return $this;
     }

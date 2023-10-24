@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -62,6 +64,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\OneToOne(mappedBy: 'id_utilisateur', cascade: ['persist', 'remove'])]
     private ?Notifications $notifications = null;
+
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: Emprunt::class)]
+    private Collection $emprunts;
+
+    #[ORM\OneToOne(mappedBy: 'userEmpruntId', cascade: ['persist', 'remove'])]
+    private ?Emprunt $emprunt = null;
+
+    public function __construct()
+    {
+        $this->emprunts = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -190,23 +203,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->exemplaires;
     }
 
-    public function setExemplaires(?Exemplaires $exemplaires): static
-    {
-        // unset the owning side of the relation if necessary
-        if ($exemplaires === null && $this->exemplaires !== null) {
-            $this->exemplaires->setIdUtilisateur(null);
-        }
-
-        // set the owning side of the relation if necessary
-        if ($exemplaires !== null && $exemplaires->getIdUtilisateur() !== $this) {
-            $exemplaires->setIdUtilisateur($this);
-        }
-
-        $this->exemplaires = $exemplaires;
-
-        return $this;
-    }
-
     public function getAvis(): ?Avis
     {
         return $this->avis;
@@ -247,6 +243,58 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         }
 
         $this->notifications = $notifications;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Emprunt>
+     */
+    public function getEmprunts(): Collection
+    {
+        return $this->emprunts;
+    }
+
+    public function addEmprunt(Emprunt $emprunt): static
+    {
+        if (!$this->emprunts->contains($emprunt)) {
+            $this->emprunts->add($emprunt);
+            $emprunt->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeEmprunt(Emprunt $emprunt): static
+    {
+        if ($this->emprunts->removeElement($emprunt)) {
+            // set the owning side to null (unless already changed)
+            if ($emprunt->getUser() === $this) {
+                $emprunt->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getEmprunt(): ?Emprunt
+    {
+        return $this->emprunt;
+    }
+
+    public function setEmprunt(?Emprunt $emprunt): static
+    {
+        // unset the owning side of the relation if necessary
+        if ($emprunt === null && $this->emprunt !== null) {
+            $this->emprunt->setUserEmpruntId(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($emprunt !== null && $emprunt->getUserEmpruntId() !== $this) {
+            $emprunt->setUserEmpruntId($this);
+        }
+
+        $this->emprunt = $emprunt;
 
         return $this;
     }
