@@ -1,8 +1,14 @@
 <?php
 
+<<<<<<<< HEAD:src/Domain/Exemplaire/Repository/ExemplairesRepository.php
 namespace App\Domain\Exemplaire\Repository;
 
 use App\Domain\Exemplaire\Exemplaires;
+========
+namespace App\Domain\Exemplaires\Repository;
+
+use App\Domain\Exemplaires\Exemplaires;
+>>>>>>>> 69ab43474f6ef6d7d784cfc3087503fc46623873:src/Domain/Exemplaires/Repository/ExemplairesRepository.php
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

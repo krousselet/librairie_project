@@ -1,8 +1,12 @@
 <?php
 
+<<<<<<<< HEAD:src/Domain/Auth/Entity/ResetPasswordRequestRepository.php
 namespace App\Domain\Auth\Entity;
+========
+namespace App\Domain\Auth\Entity\Repository;
+>>>>>>>> 69ab43474f6ef6d7d784cfc3087503fc46623873:src/Domain/Auth/Entity/Repository/ResetPasswordRequestRepository.php
 
-use App\Entity\ResetPasswordRequest;
+use App\Domain\Auth\Entity\ResetPasswordRequest;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 use SymfonyCasts\Bundle\ResetPassword\Model\ResetPasswordRequestInterface;

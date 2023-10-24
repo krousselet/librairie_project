@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<<< HEAD:src/Domain/Livre/Livres.php
 namespace App\Domain\Livre;
 
 use App\Domain\Avis\Avis;
@@ -7,6 +8,15 @@ use App\Domain\Categorie\Categories;
 use App\Domain\Emprunt\Emprunt;
 use App\Domain\Exemplaire\Exemplaires;
 use App\Domain\Livre\Repository\LivresRepository;
+========
+namespace App\Domain\Livres;
+
+use App\Domain\Avis\Avis;
+use App\Domain\Categories\Categories;
+use App\Domain\Emprunt\Emprunt;
+use App\Domain\Exemplaires\Exemplaires;
+use App\Domain\Livres\Repository\LivresRepository;
+>>>>>>>> 69ab43474f6ef6d7d784cfc3087503fc46623873:src/Domain/Livres/Livres.php
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;

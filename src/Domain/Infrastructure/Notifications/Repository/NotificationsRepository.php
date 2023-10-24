@@ -1,8 +1,14 @@
 <?php
 
+<<<<<<<< HEAD:src/Domain/Infrastructure/Notification/Repository/NotificationsRepository.php
 namespace App\Domain\Infrastructure\Notification\Repository;
 
 use App\Domain\Infrastructure\Notification\Notifications;
+========
+namespace App\Domain\Infrastructure\Notifications\Repository;
+
+use App\Domain\Infrastructure\Notifications\Notifications;
+>>>>>>>> 69ab43474f6ef6d7d784cfc3087503fc46623873:src/Domain/Infrastructure/Notifications/Repository/NotificationsRepository.php
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

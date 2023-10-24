@@ -1,8 +1,14 @@
 <?php
 
+<<<<<<<< HEAD:src/Domain/Livre/Repository/LivresRepository.php
 namespace App\Domain\Livre\Repository;
 
 use App\Domain\Livre\Livres;
+========
+namespace App\Domain\Livres\Repository;
+
+use App\Domain\Livres\Livres;
+>>>>>>>> 69ab43474f6ef6d7d784cfc3087503fc46623873:src/Domain/Livres/Repository/LivresRepository.php
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

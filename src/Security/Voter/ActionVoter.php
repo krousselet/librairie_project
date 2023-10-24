@@ -2,10 +2,9 @@
 
 namespace App\Security\Voter;
 
+use App\Domain\Auth\User;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
 use Symfony\Component\Security\Core\Authorization\Voter\Voter;
-use Symfony\Component\Security\Core\User\UserInterface;
-use App\Entity\User;
 
 class ActionVoter extends Voter
 {
@@ -17,7 +16,7 @@ class ActionVoter extends Voter
         // replace with your own logic
         // https://symfony.com/doc/current/security/voters.html
         return in_array($attribute, [self::EDIT, self::VIEW])
-            && $subject instanceof \App\Entity\User;
+            && $subject instanceof \App\Domain\Auth\User;
         // ça, ça vérifie qu'il y a bien un utilisateur de créé, et donc de connecté par la variable de session
     }
 

@@ -1,8 +1,14 @@
 <?php
 
+<<<<<<<< HEAD:src/Domain/Categorie/Repository/CategoriesRepository.php
 namespace App\Domain\Categorie\Repository;
 
 use App\Domain\Categorie\Categories;
+========
+namespace App\Domain\Categories\Repository;
+
+use App\Domain\Categories\Categories;
+>>>>>>>> 69ab43474f6ef6d7d784cfc3087503fc46623873:src/Domain/Categories/Repository/CategoriesRepository.php
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

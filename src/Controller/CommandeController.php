@@ -3,9 +3,9 @@
 namespace App\Controller;
 
 use App\Domain\Emprunt\Emprunt;
-use App\Domain\Exemplaire\Exemplaires;
-use App\Domain\Exemplaire\Repository\ExemplairesRepository;
-use App\Domain\Livre\Repository\LivresRepository;
+use App\Domain\Exemplaires\Exemplaires;
+use App\Domain\Exemplaires\Repository\ExemplairesRepository;
+use App\Domain\Livres\Repository\LivresRepository;
 use App\Form\CommandeFormType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

@@ -2,11 +2,11 @@
 
 namespace App\Domain\Emprunt;
 
+use App\Domain\Auth\User;
 use App\Domain\Emprunt\Repository\EmpruntRepository;
-use App\Domain\Exemplaire\Exemplaires;
-use App\Domain\Livre\Livres;
-use App\Domain\Rendu\Rendus;
-use App\Entity\User;
+use App\Domain\Exemplaires\Exemplaires;
+use App\Domain\Livres\Livres;
+use App\Domain\Rendus\Rendus;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 

@@ -1,8 +1,14 @@
 <?php
 
+<<<<<<<< HEAD:src/Domain/Rendu/Repository/RendusRepository.php
 namespace App\Domain\Rendu\Repository;
 
 use App\Domain\Rendu\Rendus;
+========
+namespace App\Domain\Rendus\Repository;
+
+use App\Domain\Rendus\Rendus;
+>>>>>>>> 69ab43474f6ef6d7d784cfc3087503fc46623873:src/Domain/Rendus/Repository/RendusRepository.php
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

@@ -3,8 +3,8 @@
 namespace App\DataFixtures;
 
 use App\Domain\Auteur\Auteur;
-use App\Domain\Exemplaire\Exemplaires;
-use App\Domain\Livre\Livres;
+use App\Domain\Exemplaires\Exemplaires;
+use App\Domain\Livres\Livres;
 use Couchbase\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -50,12 +50,12 @@ class AppFixtures extends Fixture
             $livre->setAuteur($auteurs[$i]->getNomEntie());
             $livre->setIsbn($faker->isbn13());
             $livre->setDescription($faker->sentence(5));
+            $livre->setQuantite($faker->numberBetween(0, 100000));
 
             $manager->persist($livre);
 
             $exemplaire = new Exemplaires();
             $exemplaire->setIdUtilisateur($user[$i]);
-            $exemplaire->setQuantite($faker->numberBetween(0, 100000));
             $manager->persist($exemplaire);
         }
         $manager->flush();
