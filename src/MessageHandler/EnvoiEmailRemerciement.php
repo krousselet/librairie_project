@@ -12,7 +12,7 @@ use Symfony\Component\Mailer\Mime\Email;
 
 class EnvoiEmailRemerciement
 {
-    private $mailer;
+    private MailerInterface $mailer;
 
     public function __construct(MailerInterface $mailer)
     {

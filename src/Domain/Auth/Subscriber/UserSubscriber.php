@@ -3,7 +3,7 @@
 namespace App\Domain\Auth\Subscriber;
 
 use App\Domain\Auth\Event\UserCreatedEvent;
-use App\Infrastructure\Mailing\Mailer;
+use App\Domain\Infrastructure\Mailing\Mailer;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 class UserSubscriber implements EventSubscriberInterface

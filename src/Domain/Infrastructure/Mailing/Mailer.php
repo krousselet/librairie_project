@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\Mailing;
+namespace App\Domain\Infrastructure\Mailing;
 
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 use Symfony\Component\Mailer\MailerInterface;
