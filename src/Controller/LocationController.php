@@ -2,15 +2,13 @@
 
 namespace App\Controller;
 
-use App\Entity\Emprunt;
-use App\Entity\Exemplaires;
-use App\Repository\ExemplairesRepository;
-use App\Repository\LivresRepository;
+use App\Domain\Exemplaire\Repository\ExemplairesRepository;
+use App\Domain\Livre\Repository\LivresRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class LocationController extends AbstractController
 {

@@ -1,28 +1,28 @@
 <?php
 
-namespace App\Repository;
+namespace App\Domain\Emprunt\Repository;
 
-use App\Entity\Exemplaires;
+use App\Domain\Emprunt\Emprunt;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Exemplaires>
+ * @extends ServiceEntityRepository<Emprunt>
  *
- * @method Exemplaires|null find($id, $lockMode = null, $lockVersion = null)
- * @method Exemplaires|null findOneBy(array $criteria, array $orderBy = null)
- * @method Exemplaires[]    findAll()
- * @method Exemplaires[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Emprunt|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Emprunt|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Emprunt[]    findAll()
+ * @method Emprunt[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ExemplairesRepository extends ServiceEntityRepository
+class EmpruntRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Exemplaires::class);
+        parent::__construct($registry, Emprunt::class);
     }
 
 //    /**
-//     * @return Exemplaires[] Returns an array of Exemplaires objects
+//     * @return Emprunt[] Returns an array of Emprunt objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class ExemplairesRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Exemplaires
+//    public function findOneBySomeField($value): ?Emprunt
 //    {
 //        return $this->createQueryBuilder('e')
 //            ->andWhere('e.exampleField = :val')
