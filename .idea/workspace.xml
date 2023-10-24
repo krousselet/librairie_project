@@ -5,27 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b63fa32-e9aa-4de3-88ed-a2b49ee1dd59" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Domain/Auth/Dto/UserDto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Auth/Event/UserCreatedEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Auth/Service/UserService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Auth/Subscriber/UserSubscriber.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Infrastructure/Mailing/Mailer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/style/parts/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/style/parts/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/style/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/style/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/style/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CommandeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CommandeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LocationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LocationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RetourController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RetourController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Emprunt.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Emprunt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Livres.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Livres.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/location/commande.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/location/commande.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Auth/Subscriber/UserSubscriber.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/Subscriber/UserSubscriber.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Auth/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Infrastructure/Mailing/Mailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Infrastructure/Mailing/Mailer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Auteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auteur/Auteur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Avis.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Avis/Avis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Categorie/Categories.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Emprunt.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Emprunt/Emprunt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Exemplaires.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Exemplaire/Exemplaires.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Livres.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Livre/Livres.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Notifications.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Infrastructure/Notification/Notifications.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Rendus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Rendu/Rendus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/ResetPasswordRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ResetPasswordRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CommandeFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CommandeFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AuteurRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auteur/Repository/AuteurRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/AvisRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Avis/Repository/AvisRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CategoriesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Categorie/Repository/CategoriesRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/EmpruntRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Emprunt/Repository/EmpruntRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ExemplairesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Exemplaire/Repository/ExemplairesRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/LivresRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Livre/Repository/LivresRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/NotificationsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Infrastructure/Notification/Repository/NotificationsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/RendusRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Rendu/Repository/RendusRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ResetPasswordRequestRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/Entity/ResetPasswordRequestRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +50,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\Users\Stagiaire\Desktop\VScode\xamp\php\php.exe">
     <include_path>
@@ -195,7 +208,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "kevin",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Stagiaire/PhpstormProjects/Maroc/librairie_project/src/Domain/Auth/Repository",
+    "last_opened_file_path": "C:/Users/Stagiaire/PhpstormProjects/Maroc/librairie_project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -206,9 +219,8 @@
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Stagiaire\PhpstormProjects\Maroc\librairie_project\src\Domain\Auth\Repository" />
-      <recent name="C:\Users\Stagiaire\PhpstormProjects\Maroc\librairie_project\src\Domain\Auth" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Stagiaire\Desktop\VScode\xamp\htdocs\symfony\librairie_project\public\assets\pictures" />
     </key>
   </component>
   <component name="RunManager">
@@ -226,25 +238,15 @@
       <option name="presentableId" value="Default" />
       <updated>1697624246147</updated>
       <workItem from="1697624248225" duration="2008000" />
-      <workItem from="1697636000475" duration="480000" />
-      <workItem from="1698068195131" duration="1553000" />
-      <workItem from="1698154458948" duration="1349000" />
+      <workItem from="1698157996520" duration="1344000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Entity/Livres.php</url>
-          <line>4</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

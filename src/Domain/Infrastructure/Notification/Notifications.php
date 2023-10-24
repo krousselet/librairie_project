@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Entity;
+namespace App\Domain\Infrastructure\Notification;
 
-use App\Repository\NotificationsRepository;
+use App\Domain\Infrastructure\Notification\Repository\NotificationsRepository;
+use App\Domain\User;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 

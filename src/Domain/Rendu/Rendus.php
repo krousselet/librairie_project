@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Entity;
+namespace App\Domain\Rendu;
 
-use App\Repository\RendusRepository;
+use App\Domain\Emprunt\Emprunt;
+use App\Domain\Rendu\Repository\RendusRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 

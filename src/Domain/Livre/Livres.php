@@ -1,13 +1,16 @@
 <?php
 
-namespace App\Entity;
+namespace App\Domain\Livre;
 
-use App\Repository\LivresRepository;
+use App\Domain\Avis\Avis;
+use App\Domain\Categorie\Categories;
+use App\Domain\Emprunt\Emprunt;
+use App\Domain\Exemplaire\Exemplaires;
+use App\Domain\Livre\Repository\LivresRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use App\Entity\Exemplaires;
 
 #[ORM\Entity(repositoryClass: LivresRepository::class)]
 class Livres

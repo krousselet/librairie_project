@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entity;
+namespace App\Domain;
 
-use App\Repository\UserRepository;
+use App\Domain\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -13,7 +13,7 @@ use Symfony\Component\Validator\Constraints as assert;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[UniqueEntity(fields: ['username'], message: 'There is already an account with this username')]
-class User implements UserInterface, PasswordAuthenticatedUserInterface
+class User implements UserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -192,10 +192,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->address = $address;
 
         return $this;
-    }
-    public function __toString()
-    {
-        return $this->username;
     }
 
     public function getExemplaires(): ?Exemplaires
