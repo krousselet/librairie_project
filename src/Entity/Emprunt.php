@@ -89,35 +89,6 @@ class Emprunt
         return $this->rendus;
     }
 
-    // public function setRendus(?Rendus $rendus): static
-    // {
-    //     // unset the owning side of the relation if necessary
-    //     if ($rendus === null && $this->rendus !== null) {
-    //         $this->rendus->setIdEmprunt(null);
-    //     }
-
-    //     // set the owning side of the relation if necessary
-    //     if ($rendus !== null && $rendus->getIdEmprunt() !== $this) {
-    //         $rendus->setIdEmprunt($this);
-    //     }
-
-    //     $this->rendus = $rendus;
-
-    //     return $this;
-    // }
-
-    // public function getQuantite(): ?Exemplaires
-    // {
-    //     return $this->quantite;
-    // }
-
-    // public function setQuantite(?Exemplaires $quantite): static
-    // {
-    //     $this->quantite = $quantite;
-
-    //     return $this;
-    // }
-
     public function getLivre(): ?Livres
     {
         return $this->livre;

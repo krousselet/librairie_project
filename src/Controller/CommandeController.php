@@ -22,6 +22,7 @@ class CommandeController extends AbstractController
     {
         // Fetch the corresponding livre using $livreId
         $livre = $livreRepository->find($livreId);
+
         $exemplaire = new Exemplaires();
         $exemplaire->setIdLivre($livre);
         if (!$exemplaire) {
@@ -47,6 +48,8 @@ class CommandeController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->persist($emprunt);
+            $entityManager->persist($exemplaire);
+            $entityManager->persist($livre);
 
             $entityManager->flush();
 
