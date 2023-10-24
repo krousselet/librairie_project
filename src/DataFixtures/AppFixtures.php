@@ -2,8 +2,8 @@
 
 namespace App\DataFixtures;
 
+use Couchbase\User;
 use Faker\Factory;
-use App\Entity\User;
 use App\Entity\Auteur;
 use App\Entity\Livres;
 use App\Entity\Exemplaires;

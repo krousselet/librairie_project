@@ -47,9 +47,6 @@ class Livres
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
-    #[ORM\Column]
-    private ?int $quantite = null;
-
     public function __construct()
     {
         $this->emprunts = new ArrayCollection();
@@ -108,28 +105,27 @@ class Livres
         return $this;
     }
 
-
     public function getExemplaires(): ?Exemplaires
     {
         return $this->exemplaires;
     }
 
-    // public function setExemplaires(?Exemplaires $exemplaires): static
-    // {
-    //     // unset the owning side of the relation if necessary
-    //     if ($exemplaires === null && $this->exemplaires !== null) {
-    //         $this->exemplaires->setIdLivre(null);
-    //     }
+    public function setExemplaires(?Exemplaires $exemplaires): static
+    {
+        // unset the owning side of the relation if necessary
+        if ($exemplaires === null && $this->exemplaires !== null) {
+            $this->exemplaires->setIdLivre(null);
+        }
 
-    //     // set the owning side of the relation if necessary
-    //     if ($exemplaires !== null && $exemplaires->getIdLivre() !== $this) {
-    //         $exemplaires->setIdLivre($this);
-    //     }
+        // set the owning side of the relation if necessary
+        if ($exemplaires !== null && $exemplaires->getIdLivre() !== $this) {
+            $exemplaires->setIdLivre($this);
+        }
 
-    //     $this->exemplaires = $exemplaires;
+        $this->exemplaires = $exemplaires;
 
-    //     return $this;
-    // }
+        return $this;
+    }
 
     public function getIdExemplaire(): ?Exemplaires
     {
@@ -215,18 +211,6 @@ class Livres
     public function setDescription(string $description): static
     {
         $this->description = $description;
-
-        return $this;
-    }
-
-    public function getQuantite(): ?int
-    {
-        return $this->quantite;
-    }
-
-    public function setQuantite(int $quantite): static
-    {
-        $this->quantite = $quantite;
 
         return $this;
     }
