@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Entity;
+namespace App\Domain\Avis;
 
-use App\Repository\AvisRepository;
+use App\Domain\Auth\User;
+use App\Domain\Avis\Repository\AvisRepository;
+use App\Domain\Livres\Livres;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;

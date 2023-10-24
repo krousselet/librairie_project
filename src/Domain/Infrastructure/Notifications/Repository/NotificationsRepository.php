@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repository;
+namespace App\Domain\Infrastructure\Notifications\Repository;
 
-use App\Entity\Notifications;
+use App\Domain\Infrastructure\Notifications\Notifications;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

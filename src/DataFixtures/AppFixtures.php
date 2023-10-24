@@ -2,13 +2,13 @@
 
 namespace App\DataFixtures;
 
+use App\Domain\Auteur\Auteur;
+use App\Domain\Exemplaires\Exemplaires;
+use App\Domain\Livres\Livres;
 use Couchbase\User;
-use Faker\Factory;
-use App\Entity\Auteur;
-use App\Entity\Livres;
-use App\Entity\Exemplaires;
-use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Persistence\ObjectManager;
+use Faker\Factory;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AppFixtures extends Fixture

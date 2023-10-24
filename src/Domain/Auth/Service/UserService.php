@@ -5,7 +5,6 @@ namespace App\Domain\Auth\Service;
 use App\Domain\Auth\Event\UserCreatedEvent;
 use App\Domain\Auth\Repository\UserRepository;
 use App\Domain\Auth\User;
-
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 

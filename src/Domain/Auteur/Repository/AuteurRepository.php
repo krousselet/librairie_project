@@ -1,28 +1,28 @@
 <?php
 
-namespace App\Repository;
+namespace App\Domain\Auteur\Repository;
 
-use App\Entity\Avis;
+use App\Domain\Auteur\Auteur;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Avis>
+ * @extends ServiceEntityRepository<Auteur>
  *
- * @method Avis|null find($id, $lockMode = null, $lockVersion = null)
- * @method Avis|null findOneBy(array $criteria, array $orderBy = null)
- * @method Avis[]    findAll()
- * @method Avis[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Auteur|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Auteur|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Auteur[]    findAll()
+ * @method Auteur[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class AvisRepository extends ServiceEntityRepository
+class AuteurRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Avis::class);
+        parent::__construct($registry, Auteur::class);
     }
 
 //    /**
-//     * @return Avis[] Returns an array of Avis objects
+//     * @return Auteur[] Returns an array of Auteur objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class AvisRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Avis
+//    public function findOneBySomeField($value): ?Auteur
 //    {
 //        return $this->createQueryBuilder('a')
 //            ->andWhere('a.exampleField = :val')
