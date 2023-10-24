@@ -36,6 +36,9 @@ class Emprunt
     #[ORM\JoinColumn(nullable: false)]
     private ?User $user = null;
 
+    #[ORM\OneToOne(inversedBy: 'emprunt', cascade: ['persist', 'remove'])]
+    private ?User $userEmpruntId = null;
+
 
 
     public function getId(): ?int
@@ -89,35 +92,6 @@ class Emprunt
         return $this->rendus;
     }
 
-    // public function setRendus(?Rendus $rendus): static
-    // {
-    //     // unset the owning side of the relation if necessary
-    //     if ($rendus === null && $this->rendus !== null) {
-    //         $this->rendus->setIdEmprunt(null);
-    //     }
-
-    //     // set the owning side of the relation if necessary
-    //     if ($rendus !== null && $rendus->getIdEmprunt() !== $this) {
-    //         $rendus->setIdEmprunt($this);
-    //     }
-
-    //     $this->rendus = $rendus;
-
-    //     return $this;
-    // }
-
-    // public function getQuantite(): ?Exemplaires
-    // {
-    //     return $this->quantite;
-    // }
-
-    // public function setQuantite(?Exemplaires $quantite): static
-    // {
-    //     $this->quantite = $quantite;
-
-    //     return $this;
-    // }
-
     public function getLivre(): ?Livres
     {
         return $this->livre;
@@ -138,6 +112,18 @@ class Emprunt
     public function setUser(?User $user): static
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getUserEmpruntId(): ?User
+    {
+        return $this->userEmpruntId;
+    }
+
+    public function setUserEmpruntId(?User $userEmpruntId): static
+    {
+        $this->userEmpruntId = $userEmpruntId;
 
         return $this;
     }
