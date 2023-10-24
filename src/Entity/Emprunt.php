@@ -36,6 +36,9 @@ class Emprunt
     #[ORM\JoinColumn(nullable: false)]
     private ?User $user = null;
 
+    #[ORM\OneToOne(inversedBy: 'emprunt', cascade: ['persist', 'remove'])]
+    private ?User $userEmpruntId = null;
+
 
 
     public function getId(): ?int
@@ -109,6 +112,18 @@ class Emprunt
     public function setUser(?User $user): static
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getUserEmpruntId(): ?User
+    {
+        return $this->userEmpruntId;
+    }
+
+    public function setUserEmpruntId(?User $userEmpruntId): static
+    {
+        $this->userEmpruntId = $userEmpruntId;
 
         return $this;
     }
