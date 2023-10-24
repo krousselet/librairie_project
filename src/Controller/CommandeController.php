@@ -7,6 +7,7 @@ use App\Entity\Exemplaires;
 use App\Form\CommandeFormType;
 use App\Repository\ExemplairesRepository;
 use App\Repository\LivresRepository;
+use App\Repository\UserRepository;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\SecurityBundle\Security;
@@ -22,7 +23,7 @@ class CommandeController extends AbstractController
 {
 
     #[Route('/commande/{livreId}', name: 'app_commande')]
-    public function commandeId(Security $security, Request $request, ExemplairesRepository $exemplairesRepository, EntityManagerInterface $entityManager, LivresRepository $livreRepository, int $livreId): Response
+    public function commandeId(UserRepository $userRepository, Security $security, Request $request, ExemplairesRepository $exemplairesRepository, EntityManagerInterface $entityManager, LivresRepository $livreRepository, int $livreId): Response
     {
         $now = new DateTime();
 
@@ -61,7 +62,10 @@ class CommandeController extends AbstractController
             $throw = false;
             $mailer = $this->get('mailer');
             $livre = $emprunt->getLivre();
-            $emailUtilisateur = $emprunt->getEmail();
+//            $emailUtilisateur = $emprunt->getEmail();
+            $emailUtilisateur = $userRepository->find(70);
+            $emailUtilisateur->getEmail();
+            dd($emailUtilisateur);
 
             $email = (new Email())
 
