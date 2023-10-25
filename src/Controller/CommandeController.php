@@ -34,7 +34,7 @@ class CommandeController extends AbstractController
 
 //        $now = new \DateTime();
 //        $emprunt->setUser($this->getUser());
-        // $emprunt->setIdExemplaire($exemplaire->getId());
+         $emprunt->setIdExemplaire($exemplaire->getId());
 //        $emprunt->setDateemprunt($now);
 //        $emprunt->setDateRetour($now);
 
