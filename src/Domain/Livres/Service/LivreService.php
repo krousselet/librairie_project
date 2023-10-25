@@ -2,7 +2,10 @@
 
 namespace App\Domain\Livres\Service;
 
+use App\Domain\Livres\Event\LivreCreatedEvent;
+use App\Domain\Livres\Livres;
 use App\Domain\Livres\Repository\LivresRepository;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class LivreService
 {
@@ -14,8 +17,10 @@ class LivreService
 
 //    public function createLivre(Livres $livres): Livres
 //    {
-//        $livres->set
+//        $livres->setTitre();
+//        $this->livresRepository->save($livres, true);
+//        $this->eventDispatcher->dispatch(new LivreCreatedEvent($livres));
 //
 //            return $livres;
-//    }
+//    } A faire plus tard
 }
