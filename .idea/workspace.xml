@@ -5,40 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b63fa32-e9aa-4de3-88ed-a2b49ee1dd59" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/config/packages/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CommandeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CommandeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/LocationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LocationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ResetPasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RetourController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RetourController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Auth/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Auth/Service/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/Service/UserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Auth/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Auteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auteur/Auteur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Avis.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Avis/Avis.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Categories/Categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Emprunt.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Emprunt/Emprunt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Exemplaires.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Exemplaires/Exemplaires.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Livres.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Livres/Livres.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Notifications.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Infrastructure/Notifications/Notifications.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Rendus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Rendus/Rendus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ResetPasswordRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/Entity/ResetPasswordRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CommandeFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CommandeFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AuteurRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auteur/Repository/AuteurRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AvisRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Avis/Repository/AvisRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CategoriesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Categories/Repository/CategoriesRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/EmpruntRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Emprunt/Repository/EmpruntRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ExemplairesRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Exemplaires/Repository/ExemplairesRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/LivresRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Livres/Repository/LivresRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/NotificationsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Infrastructure/Notifications/Repository/NotificationsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RendusRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Rendus/Repository/RendusRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ResetPasswordRequestRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/Entity/Repository/ResetPasswordRequestRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/Voter/ActionVoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Voter/ActionVoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Auth/Entity/Repository/ResetPasswordRequestRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/Entity/Repository/ResetPasswordRequestRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,23 +171,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "bryan",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Acs/Desktop/Maroc_formation/khobiry",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bryan&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Acs/Desktop/Maroc_formation/khobiry&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Stagiaire\Desktop\VScode\xamp\htdocs\symfony\librairie_project\public\assets\pictures" />
@@ -244,7 +214,8 @@
       <workItem from="1698078335256" duration="495000" />
       <workItem from="1698147551442" duration="1153000" />
       <workItem from="1698154847198" duration="2027000" />
-      <workItem from="1698157484294" duration="1818000" />
+      <workItem from="1698157484294" duration="7225000" />
+      <workItem from="1698221168527" duration="507000" />
     </task>
     <servers />
   </component>
