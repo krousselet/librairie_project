@@ -10,22 +10,22 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20231010084446 extends AbstractMigration
+final class Version20231025092651 extends AbstractMigration
 {
-    public function getDescription(): string
-    {
-        return '';
-    }
+//    public function getDescription(): string
+//    {
+//        return '';
+//    }
 
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-
+        $this->addSql('ALTER TABLE livres DROP quantite');
     }
 
     public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-
+        $this->addSql('ALTER TABLE livres ADD quantite INT NOT NULL');
     }
 }

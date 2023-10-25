@@ -217,4 +217,8 @@ class Livres
 
         return $this;
     }
+
+    public function setQuantite(int $numberBetween)
+    {
+    }
 }
