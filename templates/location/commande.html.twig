@@ -25,7 +25,8 @@
                         <td>{{ livre.titre }}</td>
                         <td>{{ livre.auteur }}</td>
                         <td>{{ livre.description }}</td>
-                        <td>{{ now }}</td>
+                        <td>{{ "now"|date("Y-m-d H:i:s") }}</td>
+
                         <td>{{ form_row(commandeForm.dateRetour, {
             label: 'Date de retour : '
         }) }}</td>
@@ -36,26 +37,6 @@
         
         <a href="{{path('app_location')}}">Valider</a>
         </div>
-        <div class="rightSide">
-            <div class="imageContainer">
-                <div class="faceContainer">
-                    <img class="face" src="{{ asset('assets/pictures/Systemium_face-removebg.png') }}" alt="Front of the book">
-                </div>
-                <div class="backContainer">
-                    <img class="back" src="{{ asset('assets/pictures/Systemium_dos-removebg.png') }}" alt="Back of the book">
-                </div>
-            </div>
-            <div class="row">
-                <label for="">Date d'emprunt : {{ "now"|date("d/m/Y")  }}</label>
-            </div>
-            <div class="row">
-                <label for="">Date de retour :</label>
-{#                <label for="">Date de retour :</label>#}
-                {{ form_row(commandeForm.dateRetour) }}
-            </div>
-            <div class="row">
-                <a href="{{ path('app_location') }}" class="validate">Valider</a>
-            </div>
-        </div>
-    </div>
+    {{ form_end(commandeForm) }}
+
 {% endblock %}

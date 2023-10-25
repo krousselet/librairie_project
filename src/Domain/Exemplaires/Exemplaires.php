@@ -23,8 +23,6 @@ class Exemplaires
     #[ORM\OneToOne(inversedBy: 'exemplaires', cascade: ['persist', 'remove'])]
     private ?Livres $id_livre = null;
 
-    #[ORM\Column(type: Types::JSON)]
-    private array $etat = [];
 
     #[ORM\Column(type: Types::BOOLEAN)]
     private bool $statut = false;

@@ -15,49 +15,48 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class CommandeController extends AbstractController
 {
-    #[Route('/', name: 'home')]
-    public function index(): Response
-    {
-        return $this->render('main/index.html.twig');
-    }
 
     #[Route('/commande/{livreId}', name: 'app_commande')]
     public function commandeId(Request $request, EntityManagerInterface $entityManager, ExemplairesRepository $exemplairesRepository, LivresRepository $livreRepository, int $livreId): Response
     {
-        $now = new DateTime();
-
+        // Fetch the corresponding livre using $livreId
         $livre = $livreRepository->find($livreId);
 
         $exemplaire = new Exemplaires();
-        $entityManager->persist($exemplaire);
+        $exemplaire->setIdLivre($livre);
+        if (!$exemplaire) {
+            // Handle the error, maybe throw an exception or redirect
+            throw new \Exception("Exemplaire not found!");
+        }
 
-        $now = new DateTime(); // Création de la date actuelle
-        $oneWeekLater = (clone $now)->modify('+1 week');
-        $oneMonthLater = (clone $now)->modify('+1 month');
+        // Create a new Emprunt
+        $emprunt = new Emprunt();
 
-//        $emprunt->setDateRetour();
+//        $now = new \DateTime();
+        $emprunt->setUser($this->getUser());
+        // $emprunt->setIdExemplaire($exemplaire->getId());
+//        $emprunt->setDateemprunt($now);
+//        $emprunt->setDateRetour($now);
 
-        $emprunt = new Emprunt(); // création de l'id ?
+        // You can associate the $livre with the Emprunt, assuming you have a relationship between Emprunt and Livres
+        $emprunt->setLivre($livreRepository->find($livreId));
+
+
         $form = $this->createForm(CommandeFormType::class, $emprunt);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-
-            $userId = $security->getUser();
-            $emprunt->setUser($userId); #id user
-            $emprunt->setLivre($livreRepository->find($livreId));
             $entityManager->persist($emprunt);
             $entityManager->persist($exemplaire);
             $entityManager->persist($livre);
 
             $entityManager->flush();
 
-
-            return $this->redirectToRoute('confirm');
+            return $this->redirectToRoute('app_location');
         }
 
         return $this->render('location/commande.html.twig', [
-            'now' => $emprunt->getDateEmprunt()->format('d-m-Y H:i:s'),
+//            'now' => $emprunt->getDateEmprunt()->format('d-m-Y H:i:s'),
             'commandeForm' => $form,
             'livre' => $livre,
         ]);
