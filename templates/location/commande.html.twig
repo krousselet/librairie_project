@@ -3,40 +3,40 @@
 {% block title %}Commande{% endblock %}
 
 {% block body %}
-{% block header %}
-{{ parent() }}
-{% endblock %}
+    {% block header %}
+        {{ parent() }}
+    {% endblock %}
     {{ form_errors(commandeForm) }}
     <div id="container">
-    {{ form_start(commandeForm) }}
-        
+        {{ form_start(commandeForm) }}
+
         <table>
             <thead>
-                    <tr>
-                        <th>Titre du Livre</th>
-                        <th>Auteur</th>
-                        <th>Description</th>
-                        <th>Date d'emprunt</th>
-                        <th>Date de retour</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>{{ livre.titre }}</td>
-                        <td>{{ livre.auteur }}</td>
-                        <td>{{ livre.description }}</td>
-                        <td>{{ "now"|date("Y-m-d H:i:s") }}</td>
+            <tr>
+                <th>Titre du Livre</th>
+                <th>Auteur</th>
+                <th>Description</th>
+                <th>Date d'emprunt</th>
+                <th>Date de retour</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ livre.titre }}</td>
+                <td>{{ livre.auteur }}</td>
+                <td>{{ livre.description }}</td>
+                <td>{{ "now"|date("Y-m-d H:i:s") }}</td>
 
-                        <td>{{ form_row(commandeForm.dateRetour, {
-            label: 'Date de retour : '
-        }) }}</td>
-                    </tr>
-                </tbody>
+                <td>{{ form_row(commandeForm.dateRetour, {
+                        label: 'Date de retour : '
+                    }) }}</td>
+            </tr>
+            </tbody>
         </table>
-        
-        
+
+
         <a href="{{path('app_location')}}">Valider</a>
-        </div>
+    </div>
     {{ form_end(commandeForm) }}
 
 {% endblock %}
