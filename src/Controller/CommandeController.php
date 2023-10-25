@@ -32,7 +32,7 @@ class CommandeController extends AbstractController
         // Create a new Emprunt
         $emprunt = new Emprunt();
 
-        $now = new \DateTime();
+//        $now = new \DateTime();
         $emprunt->setUser($this->getUser());
         // $emprunt->setIdExemplaire($exemplaire->getId());
 //        $emprunt->setDateemprunt($now);
@@ -56,7 +56,7 @@ class CommandeController extends AbstractController
         }
 
         return $this->render('location/commande.html.twig', [
-            'now' => $emprunt->getDateEmprunt()->format('d-m-Y H:i:s'),
+//            'now' => $emprunt->getDateEmprunt()->format('d-m-Y H:i:s'),
             'commandeForm' => $form,
             'livre' => $livre,
         ]);
