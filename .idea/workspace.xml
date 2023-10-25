@@ -5,10 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b63fa32-e9aa-4de3-88ed-a2b49ee1dd59" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/reset_password.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/reset_password.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/services.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20231006092507.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20231006143647.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20231006144532.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20231006144605.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20231010084446.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20231010085215.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CommandeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CommandeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Auth/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Auth/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Emprunt/Emprunt.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Emprunt/Emprunt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/location/location.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/location/location.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +84,6 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
-      <path value="$PROJECT_DIR$/vendor/symfonycasts/reset-password-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
       <path value="$PROJECT_DIR$/vendor/psr/clock" />
       <path value="$PROJECT_DIR$/vendor/psr/link" />
@@ -161,6 +174,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/debug-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfonycasts/reset-password-bundle" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -215,7 +229,7 @@
       <workItem from="1698147551442" duration="1153000" />
       <workItem from="1698154847198" duration="2027000" />
       <workItem from="1698157484294" duration="7225000" />
-      <workItem from="1698221168527" duration="2256000" />
+      <workItem from="1698221168527" duration="5961000" />
     </task>
     <servers />
   </component>

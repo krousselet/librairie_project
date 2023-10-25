@@ -3,6 +3,10 @@
 namespace App\Domain\Auth;
 
 use App\Domain\Auth\Repository\UserRepository;
+use App\Domain\Avis\Avis;
+use App\Domain\Emprunt\Emprunt;
+use App\Domain\Exemplaires\Exemplaires;
+use App\Domain\Infrastructure\Notifications\Notifications;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;

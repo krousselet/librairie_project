@@ -35,8 +35,8 @@ class CommandeController extends AbstractController
         $now = new \DateTime();
         $emprunt->setUser($this->getUser());
         // $emprunt->setIdExemplaire($exemplaire->getId());
-        $emprunt->setDateemprunt($now);
-        $emprunt->setDateRetour($now);
+//        $emprunt->setDateemprunt($now);
+//        $emprunt->setDateRetour($now);
 
         // You can associate the $livre with the Emprunt, assuming you have a relationship between Emprunt and Livres
         $emprunt->setLivre($livreRepository->find($livreId));

@@ -67,29 +67,29 @@ class Emprunt
         return $this;
     }
 
-    public function getDateEmprunt(): ?\DateTimeInterface
-    {
-        return $this->dateEmprunt;
-    }
+//    public function getDateEmprunt(): ?\DateTimeInterface
+//    {
+//        return $this->dateEmprunt;
+//    }
+//
+//    public function setDateEmprunt(\DateTimeInterface $dateEmprunt): static
+//    {
+//        $this->dateEmprunt = $dateEmprunt;
+//
+//        return $this;
+//    }
 
-    public function setDateEmprunt(\DateTimeInterface $dateEmprunt): static
-    {
-        $this->dateEmprunt = $dateEmprunt;
-
-        return $this;
-    }
-
-    public function getDateRetour(): ?\DateTimeInterface
-    {
-        return $this->dateRetour;
-    }
-
-    public function setDateRetour(\DateTimeInterface $dateRetour): static
-    {
-        $this->dateRetour = $dateRetour;
-
-        return $this;
-    }
+//    public function getDateRetour(): ?\DateTimeInterface
+//    {
+//        return $this->dateRetour;
+//    }
+//
+//    public function setDateRetour(\DateTimeInterface $dateRetour): static
+//    {
+//        $this->dateRetour = $dateRetour;
+//
+//        return $this;
+//    }
 
     public function getRendus(): ?Rendus
     {
