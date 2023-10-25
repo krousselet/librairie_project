@@ -16,11 +16,13 @@ class LocationController extends AbstractController
     public function displayLocationAvailability(LivresRepository $livreRepository, ExemplairesRepository $exemplairesRepository,Security $security, EntityManagerInterface $entityManager): Response
     {
         $livres = $livreRepository->findAll();
+        $exemplaires = $exemplairesRepository->findAll();
 
 
         return $this->render('location/location.html.twig', [
             'livres' => $livres,
-            'exemplaires' => $exemplairesRepository->findAll(),
+            'exemplaires' => $exemplaires,
+
         ]);
     }
 }
