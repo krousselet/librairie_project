@@ -1,16 +1,9 @@
 <?php
 
-<<<<<<<< HEAD:src/Domain/Categorie/Categories.php
-namespace App\Domain\Categorie;
-
-use App\Domain\Categorie\Repository\CategoriesRepository;
-use App\Domain\Livre\Livres;
-========
 namespace App\Domain\Categories;
 
 use App\Domain\Categories\Repository\CategoriesRepository;
 use App\Domain\Livres\Livres;
->>>>>>>> 69ab43474f6ef6d7d784cfc3087503fc46623873:src/Domain/Categories/Categories.php
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CategoriesRepository::class)]

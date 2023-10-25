@@ -9,7 +9,7 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-/.idea
+
 ###> phpunit/phpunit ###
 /phpunit.xml
 .phpunit.result.cache
@@ -17,3 +17,8 @@
 
 ###> symfony/phpunit-bridge ###
 ###< symfony/phpunit-bridge ###
+
+*.iws
+.idea/workspace.xml
+.idea/tasks.xml
+

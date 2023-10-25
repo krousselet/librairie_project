@@ -1,16 +1,9 @@
 <?php
 
-<<<<<<<< HEAD:src/Domain/Rendu/Rendus.php
-namespace App\Domain\Rendu;
-
-use App\Domain\Emprunt\Emprunt;
-use App\Domain\Rendu\Repository\RendusRepository;
-========
 namespace App\Domain\Rendus;
 
 use App\Domain\Emprunt\Emprunt;
 use App\Domain\Rendus\Repository\RendusRepository;
->>>>>>>> 69ab43474f6ef6d7d784cfc3087503fc46623873:src/Domain/Rendus/Rendus.php
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 

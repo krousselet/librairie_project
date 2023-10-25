@@ -1,16 +1,9 @@
 <?php
 
-<<<<<<<< HEAD:src/Domain/Infrastructure/Notification/Notifications.php
-namespace App\Domain\Infrastructure\Notification;
-
-use App\Domain\Infrastructure\Notification\Repository\NotificationsRepository;
-use App\Domain\User;
-========
 namespace App\Domain\Infrastructure\Notifications;
 
 use App\Domain\Auth\User;
 use App\Domain\Infrastructure\Notifications\Repository\NotificationsRepository;
->>>>>>>> 69ab43474f6ef6d7d784cfc3087503fc46623873:src/Domain/Infrastructure/Notifications/Notifications.php
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 

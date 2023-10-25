@@ -1,20 +1,11 @@
 <?php
 
-<<<<<<<< HEAD:src/Domain/Exemplaire/Exemplaires.php
-namespace App\Domain\Exemplaire;
-
-use App\Domain\Emprunt\Emprunt;
-use App\Domain\Exemplaire\Repository\ExemplairesRepository;
-use App\Domain\Livre\Livres;
-use App\Entity\User;
-========
 namespace App\Domain\Exemplaires;
 
 use App\Domain\Auth\User;
 use App\Domain\Emprunt\Emprunt;
 use App\Domain\Exemplaires\Repository\ExemplairesRepository;
 use App\Domain\Livres\Livres;
->>>>>>>> 69ab43474f6ef6d7d784cfc3087503fc46623873:src/Domain/Exemplaires/Exemplaires.php
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
