@@ -21,6 +21,7 @@ class UserDto
         $user = new User();
         $user->setUsername($this->username);
         $user->setPassword($this->password);
+        $user->setEmail($this->email);
         $user->setFirstname($this->firstname);
         $user->setLastname($this->lastname);
         return $user;
