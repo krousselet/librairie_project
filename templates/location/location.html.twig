@@ -32,18 +32,20 @@
                 </thead>
                 <tbody>
                 {% for livre in livres %}
-                    <tr>
-                        <td>{{ livre.titre }}</td>
-                        <td>{{ livre.auteur }}</td>
-{#                        <td>{{ livre.quantite }}</td>#}
-{#                        <td>#}
-{#                            {% if livre.quantite > 0 %}#}
-{#                                <a href="{{ path('app_commande', {'livreId': livre.id}) }}" id="{{livre.id}}">Commander</a>#}
-{#                            {% else %}#}
-{#                                Out of stock#}
-{#                            {% endif %}#}
-{#                        </td>#}
-                    </tr>
+                    {% for exemplaire in exemplaires %} {# Assuming each 'livre' has a list of 'exemplaires' #}
+                        <tr>
+                            <td>{{ livre.titre }}</td>
+                            <td>{{ livre.auteur }}</td>
+                            <td>{{ exemplaire.quantite }}</td>
+                            <td>
+                                {% if exemplaire.quantite > 0 %}
+                                    <a href="{{ path('app_commande', {'livreId': livre.id}) }}" id="{{livre.id}}">Commander</a>
+                                {% else %}
+                                    Out of stock
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
                 {% endfor %}
                 </tbody>
             </table>
