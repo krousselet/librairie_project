@@ -1,4 +1,3 @@
-
 ###> symfony/framework-bundle ###
 .env
 /.env.local
@@ -17,3 +16,7 @@
 
 ###> symfony/phpunit-bridge ###
 ###< symfony/phpunit-bridge ###
+
+*.iws
+.idea/workspace.xml
+.idea/tasks.xml
