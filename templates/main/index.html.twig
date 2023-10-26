@@ -1,19 +1,27 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Librair'Bois - Feuillecteur de Rêves{% endblock %}
+{% block title %}
+    Librair'Bois - Feuillecteur de Rêves
+{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('path/to/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
     <div class="container">
-        <h1>Bienvenue chez Librair'Bois</h1>
-        <p>Explorez un monde de rêves à travers nos livres en bois aux pages infinies. Empruntez un morceau de rêve aujourd'hui.</p>
+        <h1>Librair'Bois</h1>
+        <p>
+            Explorez un monde de rêves à travers nos livres en bois aux pages infinies.
+            Empruntez un morceau de rêve aujourd'hui.
+        </p>
 
         <div class="buttons">
             <a href="{{ path('app_register') }}" class="register-button">Enregistrement</a>
-            <a href="{{ path('app_register') }}" class="login-button">Connexion</a>
+            <a href="{{ path('app_login') }}" class="login-button">Connexion</a>
         </div>
     </div>
 {% endblock %}
