@@ -1,0 +1,49 @@
+body {
+    background-image: url('/assets/pictures/Library.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: #ffffff;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            text-align: center;
+
+            .register-button,
+            .login-button {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 18px;
+                border: none;
+                cursor: pointer;
+                margin: 10px;
+
+                &.register-button {
+                    background-color: #3498db;
+                    color: #fff;
+                }
+
+                &.login-button {
+                    background-color: #2ecc71;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

@@ -30,8 +30,8 @@ class Emprunt
     #[ORM\OneToOne(mappedBy: 'id_emprunt', cascade: ['persist', 'remove'])]
     private ?Rendus $rendus = null;
 
-    // #[ORM\ManyToOne(inversedBy: 'emprunts')]
-    // private ?Exemplaires $quantite = null;
+//     #[ORM\ManyToOne(inversedBy: 'emprunts')]
+//     private ?Exemplaires $quantite = null;
 
     #[ORM\ManyToOne(inversedBy: 'emprunts')]
     private ?Livres $livre = null;

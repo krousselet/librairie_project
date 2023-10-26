@@ -21,7 +21,6 @@ class UserService
     {
         $user->setPassword($this->passwordHasher->hashPassword($user, $user->getPassword()));
 
-
         $this->userRepository->save($user, true);
         $this->eventDispatcher->dispatch(new UserCreatedEvent($user));
         return $user;

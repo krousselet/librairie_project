@@ -481,4 +481,49 @@ a:last-child {
   color: white;
 }
 
+body {
+  background-image: url("/assets/pictures/Library.jpg");
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: #ffffff;
+}
+body .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+body .container h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+body .container p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+body .container .buttons {
+  text-align: center;
+}
+body .container .buttons .register-button,
+body .container .buttons .login-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+body .container .buttons .register-button.register-button,
+body .container .buttons .login-button.register-button {
+  background-color: #3498db;
+  color: #fff;
+}
+body .container .buttons .register-button.login-button,
+body .container .buttons .login-button.login-button {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */
