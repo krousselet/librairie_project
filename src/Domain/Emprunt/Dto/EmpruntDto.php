@@ -10,6 +10,7 @@ class EmpruntDto
     public  function __construct(
                                 public \DateTime $dateEmprunt,
                                 public \DateTime $dateRetour,
+                                public $quantite,
 
     )
     {
@@ -20,6 +21,7 @@ class EmpruntDto
         $emprunt = new Emprunt();
         $emprunt->setDateEmprunt($this->dateEmprunt);
         $emprunt->setDateRetour($this->dateRetour);
+        $emprunt->setQuantite($this->quantite);
         return $emprunt;
     }
 }

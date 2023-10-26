@@ -7,7 +7,7 @@
         private $titreLivre;
         private $email;
 
-        public function __construct(string $titreLivre, $email,)
+        public function __construct(string $titreLivre, $email)
         {
             $this->titreLivre = $titreLivre;
             $this->email = $email;
