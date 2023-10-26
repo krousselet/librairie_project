@@ -21,6 +21,19 @@ class Emprunt
     #[ORM\OneToOne(inversedBy: 'emprunt', cascade: ['persist', 'remove'])]
     private ?Exemplaires $id_exemplaire = null;
 
+    #[ORM\OneToOne(inversedBy: 'emprunt', cascade: ['persist', 'remove'])]
+    private ?Exemplaires $quantite = null;
+
+    public function getQuantite(): ?Exemplaires
+    {
+        return $this->quantite;
+    }
+
+    public function setQuantite(?Exemplaires $quantite): void
+    {
+        $this->quantite = $quantite;
+    }
+
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $dateEmprunt = null;
 
