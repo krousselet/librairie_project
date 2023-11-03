@@ -95,7 +95,6 @@ header nav .hamburger .lower-active {
 
 body {
   min-width: 100vw;
-  min-height: 100vh;
 }
 
 label {
@@ -177,13 +176,14 @@ td {
 }
 
 .user-profile {
-  margin: 110px auto;
+  margin: 100px auto;
   padding: 30px;
   border: 1px solid #ccc;
   max-width: 400px;
   background: linear-gradient(to right, #f7f7f7, #ffffff);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  align-items: center;
 }
 
 .user-profile div {
@@ -270,7 +270,7 @@ label {
   min-width: 300px;
   height: auto;
   padding: 20px;
-  margin: 50px auto;
+  margin: 80px auto;
   background-color: #f5f5f5;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -421,7 +421,8 @@ a:last-child {
   height: 250px;
   top: -300px;
 }
-.container .rightSide .imageContainer .faceContainer, .container .rightSide .imageContainer .backContainer {
+.container .rightSide .imageContainer .faceContainer,
+.container .rightSide .imageContainer .backContainer {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -486,17 +487,18 @@ a:last-child {
   height: 100vh;
   background-image: url("/assets/pictures/Book.jpg");
   background-size: cover;
-  color: #ffffff;
-  font-family: "Allura", cursive;
+  color: #fff;
+  font-family: "Norican", cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .container h1 {
-  font-size: 75px;
+  font-size: 59px;
   font-weight: bold;
   margin-bottom: 20px;
-  font-family: "Allura", cursive;
+  font-family: "Norican", cursive;
+  color: black;
 }
 .container h1 img {
   max-width: 100px;
@@ -506,7 +508,7 @@ a:last-child {
   font-size: 18px;
   line-height: 1.6;
   margin-top: 10px;
-  font-family: "Allura", cursive;
+  font-family: "Norican", cursive;
 }
 
 .buttons {
@@ -524,7 +526,7 @@ a:last-child {
   cursor: pointer;
   margin: 10px;
   border-radius: 5px;
-  font-family: "Allura", cursive;
+  font-family: "Norican", cursive;
   transition: opacity 0.3s, box-shadow 0.3s;
 }
 .buttons .register-button.register-button,
@@ -545,6 +547,40 @@ a:last-child {
 .buttons:hover .login-button {
   opacity: 1;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.alert {
+  background-color: #dc3545;
+  color: #fff;
+  border: 1px solid #bd2130;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+form {
+  margin: 0 auto;
+}
+form input[type=email] {
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  background-color: #ff8800;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+form small {
+  color: #777;
+}
+
+.center-text {
+  text-align: center;
+  margin-top: 90px;
 }
 
 /*# sourceMappingURL=style.css.map */

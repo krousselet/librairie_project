@@ -16,11 +16,11 @@
     <h1>Vos informations :</h1>
     <br>
         <ul>
-            <div class="title">Username :<div class="userinfo">{{ app.user.username }}</div></div>
+            <div class="title">Nom d’utilisateur :<div class="userinfo">{{ app.user.username }}</div></div>
             <div class="title">Email :<div class="userinfo">{{ app.user.email }}</div></div>
-            <div class="title">FirstName :<div class="userinfo">{{ app.user.firstName }}</div ></div>
-            <div class="title">LastName :<div class="userinfo">{{ app.user.lastName }}</div></div>
-            <div class="title">Address :<div class="userinfo">{{ app.user.address }}</div></div>
+            <div class="title">Prénom :<div class="userinfo">{{ app.user.firstName }}</div ></div>
+            <div class="title">Nom :<div class="userinfo">{{ app.user.lastName }}</div></div>
+            <div class="title">Adresse :<div class="userinfo">{{ app.user.address }}</div></div>
             <div class="button-row">
                 <a class="btn-perso2" href="{{ path('app_user_edit', {'id': app.user.id}) }}">Modifier</a>
             </div>
