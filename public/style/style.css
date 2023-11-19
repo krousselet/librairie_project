@@ -95,7 +95,6 @@ header nav .hamburger .lower-active {
 
 body {
   min-width: 100vw;
-  min-height: 100vh;
 }
 
 label {
@@ -177,13 +176,14 @@ td {
 }
 
 .user-profile {
-  margin: 110px auto;
+  margin: 100px auto;
   padding: 30px;
   border: 1px solid #ccc;
   max-width: 400px;
   background: linear-gradient(to right, #f7f7f7, #ffffff);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  align-items: center;
 }
 
 .user-profile div {
@@ -270,7 +270,7 @@ label {
   min-width: 300px;
   height: auto;
   padding: 20px;
-  margin: 50px auto;
+  margin: 80px auto;
   background-color: #f5f5f5;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -421,7 +421,8 @@ a:last-child {
   height: 250px;
   top: -300px;
 }
-.container .rightSide .imageContainer .faceContainer, .container .rightSide .imageContainer .backContainer {
+.container .rightSide .imageContainer .faceContainer,
+.container .rightSide .imageContainer .backContainer {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -481,50 +482,105 @@ a:last-child {
   color: white;
 }
 
-body {
-  font-family: Arial, sans-serif;
-}
-body .container {
-  background-image: url("/assets/pictures/Library.jpg");
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/assets/pictures/Book.jpg");
   background-size: cover;
-  background-position: center center;
+  color: #fff;
+  font-family: "Norican", cursive;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  width: 100vw;
-  margin: auto;
-  height: 100vh;
+  align-items: center;
 }
-body .container h1 {
-  font-size: 32px;
+.container h1 {
+  font-size: 59px;
   font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "Norican", cursive;
+  color: black;
 }
-body .container p {
+.container h1 img {
+  max-width: 100px;
+  margin-right: 20px;
+}
+.container p {
   font-size: 18px;
-  line-height: 1.1;
+  line-height: 1.6;
+  margin-top: 10px;
+  font-family: "Norican", cursive;
 }
-body .container .buttons {
-  text-align: center;
+
+.buttons {
+  position: absolute;
+  top: 225px;
+  left: 50px;
+  transform: translate(10px, 10px) rotate(-9deg);
 }
-body .container .buttons .register-button,
-body .container .buttons .login-button {
+.buttons .register-button,
+.buttons .login-button {
   display: inline-block;
   padding: 10px 20px;
   font-size: 18px;
   border: none;
   cursor: pointer;
   margin: 10px;
+  border-radius: 5px;
+  font-family: "Norican", cursive;
+  transition: opacity 0.3s, box-shadow 0.3s;
 }
-body .container .buttons .register-button.register-button,
-body .container .buttons .login-button.register-button {
+.buttons .register-button.register-button,
+.buttons .login-button.register-button {
   background-color: #3498db;
   color: #fff;
+  opacity: 0.7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-body .container .buttons .register-button.login-button,
-body .container .buttons .login-button.login-button {
+.buttons .register-button.login-button,
+.buttons .login-button.login-button {
   background-color: #2ecc71;
   color: #fff;
+  opacity: 0.7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.buttons:hover .register-button,
+.buttons:hover .login-button {
+  opacity: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.alert {
+  background-color: #dc3545;
+  color: #fff;
+  border: 1px solid #bd2130;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+form {
+  margin: 0 auto;
+}
+form input[type=email] {
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+form button {
+  background-color: #ff8800;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+form small {
+  color: #777;
+}
+
+.center-text {
+  text-align: center;
+  margin-top: 90px;
 }
 
 /*# sourceMappingURL=style.css.map */
