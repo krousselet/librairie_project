@@ -18,21 +18,23 @@ class Emprunt
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\OneToOne(inversedBy: 'emprunt', cascade: ['persist', 'remove'])]
-    private ?Exemplaires $id_exemplaire = null;
+//    #[ORM\ManyToOne(targetEntity: Exemplaires::class, inversedBy: "emprunt")]
+//    private ?Exemplaires $id_exemplaire;
 
-    #[ORM\OneToOne(inversedBy: 'emprunt', cascade: ['persist', 'remove'])]
-    private ?Exemplaires $quantite = null;
 
-    public function getQuantite(): ?Exemplaires
-    {
-        return $this->quantite;
-    }
+//    #[ORM\OneToOne(mappedBy: 'emprunt', cascade: ['persist', 'remove'])]
+//    private ?Exemplaires $quantite = null;
 
-    public function setQuantite(?Exemplaires $quantite): void
-    {
-        $this->quantite = $quantite;
-    }
+
+//    public function getQuantite(): ?Exemplaires
+//    {
+//        return $this->quantite;
+//    }
+//
+//    public function setQuantite(?Exemplaires $quantite): void
+//    {
+//        $this->quantite = $quantite;
+//    }
 
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $dateEmprunt = null;
@@ -46,15 +48,15 @@ class Emprunt
 //     #[ORM\ManyToOne(inversedBy: 'emprunts')]
 //     private ?Exemplaires $quantite = null;
 
-    #[ORM\ManyToOne(inversedBy: 'emprunts')]
-    private ?Livres $livre = null;
+//    #[ORM\ManyToOne(inversedBy: 'emprunts')]
+//    private ?Livres $livre = null;
+//
+//    #[ORM\ManyToOne(inversedBy: 'emprunts')]
+//    #[ORM\JoinColumn(nullable: false)]
+//    private ?User $user = null;
 
-    #[ORM\ManyToOne(inversedBy: 'emprunts')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?User $user = null;
-
-    #[ORM\OneToOne(inversedBy: 'emprunt', cascade: ['persist', 'remove'])]
-    private ?User $userEmpruntId = null;
+//    #[ORM\OneToOne(inversedBy: 'emprunt', cascade: ['persist', 'remove'])]
+//    private ?User $userEmpruntId = null;
 
 
 

@@ -17,11 +17,12 @@ class Exemplaires
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\OneToOne(inversedBy: 'exemplaires', cascade: ['persist', 'remove'])]
-    private ?User $id_utilisateur = null;
-
-    #[ORM\OneToOne(inversedBy: 'exemplaires', cascade: ['persist', 'remove'])]
-    private ?Livres $id_livre = null;
+//    #[ORM\OneToOne(inversedBy: 'exemplaires', cascade: ['persist', 'remove'])]
+//    private ?User $id_utilisateur = null;
+//
+//    #[ORM\OneToOne(inversedBy: 'exemplaires', cascade: ['persist', 'remove'])]
+//    private ?Livres $id_livre = null;
+// 14:44
 
 
     #[ORM\Column(type: Types::BOOLEAN)]
@@ -30,47 +31,53 @@ class Exemplaires
     #[ORM\Column]
     private ?int $quantite = 0;
 
-    #[ORM\OneToOne(mappedBy: 'id_exemplaire', cascade: ['persist', 'remove'])]
-    private ?Livres $livres = null;
+//    #[ORM\OneToOne(mappedBy: 'id_exemplaire', cascade: ['persist', 'remove'])]
+//    private ?Livres $livres = null;
+// 14:44
 
-    #[ORM\OneToOne(mappedBy: 'id_exemplaire', cascade: ['persist', 'remove'])]
-    private ?Emprunt $emprunt = null;
+
+//    #[ORM\OneToMany(targetEntity: Emprunt::class, mappedBy: "id_exemplaire")]
+//    private $emprunt;
+// 14: 44
+
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getIdUtilisateur(): ?User
-    {
-        return $this->id_utilisateur;
-    }
+//    public function getIdUtilisateur(): ?User
+//    {
+//        return $this->id_utilisateur;
+//    }
+// 14 : 44
 
-    public function setIdUtilisateur(?User $id_utilisateur): static
-    {
-        $this->id_utilisateur = $id_utilisateur;
+//    public function setIdUtilisateur(?User $id_utilisateur): static
+//    {
+//        $this->id_utilisateur = $id_utilisateur;
+//
+//        return $this;
+//    }
+// 14 : 44
 
-        return $this;
-    }
+//    public function getIdLivre(): ?Livres
+//    {
+//        return $this->id_livre;
+//    }
 
-    public function getIdLivre(): ?Livres
-    {
-        return $this->id_livre;
-    }
-
-    public function setIdLivre(?Livres $id_livre): static
-    {
-        $this->id_livre = $id_livre;
-
-        return $this;
-    }
+//    public function setIdLivre(?Livres $id_livre): static
+//    {
+//        $this->id_livre = $id_livre;
+//
+//        return $this;
+//    }
 
     public function getQuantite(): int
     {
         return $this->quantite;
     }
 
-    public function setQuantite(int $quantite)
+    public function setQuantite(int $quantite): static
     {
         $this->quantite = $quantite;
 
@@ -96,53 +103,10 @@ class Exemplaires
         return $this->livres;
     }
 
-    public function setLivres(?Livres $livres): static
-    {
-        // unset the owning side of the relation if necessary
-        if ($livres === null && $this->livres !== null) {
-            $this->livres->setIdExemplaire(null);
-        }
-
-        // set the owning side of the relation if necessary
-        if ($livres !== null && $livres->getIdExemplaire() !== $this) {
-            $livres->setIdExemplaire($this);
-        }
-
-        $this->livres = $livres;
-
-        return $this;
-    }
-
     public function getEmprunt(): ?Emprunt
     {
         return $this->emprunt;
     }
-
-    public function setEmprunt(?Emprunt $emprunt): static
-    {
-        // unset the owning side of the relation if necessary
-        if ($emprunt === null && $this->emprunt !== null) {
-            $this->emprunt->setIdExemplaire(null);
-        }
-
-        // set the owning side of the relation if necessary
-        if ($emprunt !== null && $emprunt->getIdExemplaire() !== $this) {
-            $emprunt->setIdExemplaire($this);
-        }
-
-        $this->emprunt = $emprunt;
-
-        return $this;
-    }
-
-    // public function updateExemplairesAvailability($exemplaire)
-    // {
-    //     if ($exemplaire->getQuantite() === 0) {
-    //         $this->setStatut(false);
-    //     } else {
-    //         $this->setStatut(true);
-    //     }
-    // }
 
     public function getStatut(): bool
     {

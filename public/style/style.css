@@ -482,18 +482,19 @@ a:last-child {
 }
 
 body {
-  background-image: url("/assets/pictures/Library.jpg");
-  background-size: cover;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  color: #ffffff;
 }
 body .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  background-image: url("/assets/pictures/Library.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 100vw;
+  margin: auto;
+  height: 100vh;
 }
 body .container h1 {
   font-size: 32px;
@@ -501,7 +502,7 @@ body .container h1 {
 }
 body .container p {
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.1;
 }
 body .container .buttons {
   text-align: center;
